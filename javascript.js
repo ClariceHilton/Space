@@ -43,5 +43,21 @@ function handleAcceleration(event) {
 
 }
 
+function handleMotion(event) {
+
+  var m = event.acceleration;
+  var n = event.accelerationIncludingGravity;  // In degree in the range [-180,180]
+  var o = event.rotationRate; // In degree in the range [-90,90]
+  var p = event.interval;
+
+
+  output.innerHTML  = "acceleration : " + m + "\n";
+  output.innerHTML += "accelerationIncludingGravity: " + n + "\n";
+  output.innerHTML += "rotationRate: " + o + "\n";
+  output.innerHTML += "interval: " + p + "\n";
+
+
+}
+
 window.addEventListener('deviceorientation', handleOrientation);
-window.addEventListener('deviceacceleration', handleOrientation);
+window.addEventListener('devicemotion', handleMotion);
