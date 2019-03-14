@@ -21,6 +21,7 @@ function handleOrientation(event) {
   output.innerHTML += "absolute: " + p + "\n";
   output.innerHTML += "webkit: " + webkit + "\n";
   output.innerHTML += "accuracy: " + accuracy;
+  output.innerHTML += "rotation: " + event.rotation;
 
   // Because we don't want to have the device upside down
   // We constrain the x value to the range [-90,90]
