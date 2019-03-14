@@ -21,7 +21,7 @@ function handleOrientation(event) {
   output.innerHTML += "absolute: " + p + "\n";
   output.innerHTML += "webkit: " + webkit + "\n";
   output.innerHTML += "accuracy: " + accuracy + "\n";
-  output.innerHTML += "rotation: " + event.y;
+
 
   // Because we don't want to have the device upside down
   // We constrain the x value to the range [-90,90]
@@ -39,4 +39,9 @@ function handleOrientation(event) {
   ball.style.left = (maxY*y/180 - 10) + "px";
 }
 
+function handleAcceleration(event) {
+
+}
+
 window.addEventListener('deviceorientation', handleOrientation);
+window.addEventListener('deviceacceleration', handleOrientation);
