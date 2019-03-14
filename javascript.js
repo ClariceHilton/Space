@@ -51,10 +51,10 @@ function handleMotion(event) {
   var p = event.interval;
 
 
-  output2.innerHTML  = "acceleration : " + m + "\n";
-  output2.innerHTML += "accelerationIncludingGravity: " + n + "\n";
-  output2.innerHTML += "rotationRate: " + o + "\n";
-  output2.innerHTML += "interval: " + p + "\n";
+  output.innerHTML  = "acceleration : " + m + "\n";
+  output.innerHTML += "accelerationIncludingGravity: " + n + "\n";
+  output.innerHTML += "rotationRate: " + o + "\n";
+  output.innerHTML += "interval: " + p + "\n";
 
 
 }
