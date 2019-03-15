@@ -43,21 +43,23 @@ function handleOrientation(event) {
 function handleMotion(event) {
 
   console.log("hello");
-  var m = event.acceleration;
+  var x = event.acceleration.x;
+  var y = event.acceleration.y;
+  var z = event.acceleration.z;
   var n = event.accelerationIncludingGravity;  // In degree in the range [-180,180]
   var o = event.rotationRate; // In degree in the range [-90,90]
   var p = event.interval;
-  console.log("acceleration : " + m);
+  console.log("acceleration x: " + x);
 
-  output.innerHTML  = "acceleration : " + m + "\n";
+  output.innerHTML  = "acceleration x: " + x + "\n";
+  output.innerHTML  = "acceleration y: " + y + "\n";
+  output.innerHTML  = "acceleration z: " + z + "\n";
   output.innerHTML += "accelerationIncludingGravity: " + n + "\n";
   output.innerHTML += "rotationRate: " + o + "\n";
   output.innerHTML += "interval: " + p + "\n";
 
 
 }
-window.addEventListener('devicemotion', function(event) {
-  console.log(event.acceleration.x + ' m/s2');
-});
-//window.addEventListener("devicemotion", handleMotion, true);
+
+window.addEventListener("devicemotion", handleMotion, true);
 window.addEventListener('deviceorientation', handleOrientation);
