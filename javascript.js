@@ -45,6 +45,7 @@ function handleAcceleration(event) {
 
 function handleMotion(event) {
 
+  console.log("hello");
   var m = event.acceleration;
   var n = event.accelerationIncludingGravity;  // In degree in the range [-180,180]
   var o = event.rotationRate; // In degree in the range [-90,90]
