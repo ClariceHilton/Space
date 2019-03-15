@@ -1,6 +1,7 @@
 var ball = document.querySelector('.ball');
 var garden = document.querySelector('.garden');
 var output = document.querySelector('.output');
+var output2 = document.querySelector('.output2');
 
 var maxX = garden.clientWidth  - ball.clientWidth;
 var maxY = garden.clientHeight - ball.clientHeight;
@@ -42,7 +43,6 @@ function handleOrientation(event) {
 
 function handleMotion(event) {
 
-  console.log("hello");
   var x = event.acceleration.x;
   var y = event.acceleration.y;
   var z = event.acceleration.z;
@@ -51,12 +51,12 @@ function handleMotion(event) {
   var p = event.interval;
   console.log("acceleration x: " + x);
 
-  output.innerHTML  = "acceleration x: " + x + "\n";
-  output.innerHTML  = "acceleration y: " + y + "\n";
-  output.innerHTML  = "acceleration z: " + z + "\n";
-  output.innerHTML += "accelerationIncludingGravity: " + n + "\n";
-  output.innerHTML += "rotationRate: " + o + "\n";
-  output.innerHTML += "interval: " + p + "\n";
+  output2.innerHTML  = "acceleration x: " + x + "\n";
+  output2.innerHTML  = "acceleration y: " + y + "\n";
+  output2.innerHTML  = "acceleration z: " + z + "\n";
+  output2.innerHTML += "accelerationIncludingGravity: " + n + "\n";
+  output2.innerHTML += "rotationRate: " + o + "\n";
+  output2.innerHTML += "interval: " + p + "\n";
 
 
 }
