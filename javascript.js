@@ -39,9 +39,6 @@ function handleOrientation(event) {
   ball.style.left = (maxY*y/180 - 10) + "px";
 }
 
-function handleAcceleration(event) {
-
-}
 
 function handleMotion(event) {
 
@@ -59,5 +56,8 @@ function handleMotion(event) {
 
 
 }
-window.addEventListener("devicemotion", handleMotion, true);
+window.addEventListener('devicemotion', function(event) {
+  console.log(event.acceleration.x + ' m/s2');
+});
+//window.addEventListener("devicemotion", handleMotion, true);
 window.addEventListener('deviceorientation', handleOrientation);
