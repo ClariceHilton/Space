@@ -46,18 +46,25 @@ function handleMotion(event) {
   var x = event.acceleration.x;
   var y = event.acceleration.y;
   var z = event.acceleration.z;
-  var n = event.accelerationIncludingGravity;  // In degree in the range [-180,180]
-  var o = event.rotationRate; // In degree in the range [-90,90]
+  var n = event.accelerationIncludingGravity;
+  var a = event.rotationRate.alpha;
+  var b = event.rotationRate.beta;
+  var g = event.rotationRate.gamma;
   var p = event.interval;
-  console.log("acceleration x: " + x);
+
 
   output2.innerHTML  = "acceleration x: " + x + "\n";
+  console.log("acceleration x: " + x);
   output2.innerHTML  = "acceleration y: " + y + "\n";
+  console.log("acceleration y: " + y);
   output2.innerHTML  = "acceleration z: " + z + "\n";
+  console.log("acceleration x: " + z);
   output2.innerHTML  = "acceleration x: " + x + "\n";
   output2.innerHTML  = "acceleration y: " + y + "\n";
   output2.innerHTML += "accelerationIncludingGravity: " + n + "\n";
-  output2.innerHTML += "rotationRate: " + o + "\n";
+  output2.innerHTML += "rotationRatealpha: " + a + "\n";
+  output2.innerHTML += "rotationRatebeta: " + b + "\n";
+  output2.innerHTML += "rotationRategamma: " + g + "\n";
   output2.innerHTML += "interval: " + p + "\n";
 
 
