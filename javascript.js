@@ -50,7 +50,7 @@ function handleMotion(event) {
   var n = event.accelerationIncludingGravity;  // In degree in the range [-180,180]
   var o = event.rotationRate; // In degree in the range [-90,90]
   var p = event.interval;
-
+  console.log("acceleration : " + m);
 
   output.innerHTML  = "acceleration : " + m + "\n";
   output.innerHTML += "accelerationIncludingGravity: " + n + "\n";
