@@ -59,5 +59,5 @@ function handleMotion(event) {
 
 
 }
-window.addEventListener('devicemotion', handleMotion);
+window.addEventListener("devicemotion", handleMotion, true);
 window.addEventListener('deviceorientation', handleOrientation);
