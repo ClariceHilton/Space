@@ -54,6 +54,9 @@ function handleMotion(event) {
   var g = event.rotationRate.gamma;
   var p = event.interval;
 
+  if (z>1.2) {
+    document.body.style.backgroundColor = "white";
+  }
   if (z>0.8 && z<1.2) {
     document.body.style.backgroundColor = "yellow";
   }
@@ -68,6 +71,9 @@ function handleMotion(event) {
   }
   if (z>-0.4 && z<-1) {
     document.body.style.backgroundColor = "cyan";
+  }
+  if (z<-1) {
+    document.body.style.backgroundColor = "grey";
   }
 
 
