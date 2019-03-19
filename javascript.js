@@ -43,6 +43,8 @@ function handleOrientation(event) {
 
 function handleMotion(event) {
 
+
+
   var x = event.acceleration.x;
   var y = event.acceleration.y;
   var z = event.acceleration.z;
@@ -72,3 +74,5 @@ function handleMotion(event) {
 
 window.addEventListener("devicemotion", handleMotion, true);
 window.addEventListener('deviceorientation', handleOrientation);
+
+//var successBool = window.navigator.vibrate(pattern);

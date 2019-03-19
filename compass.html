@@ -32,6 +32,7 @@
       if (heading > 359 || heading < 1) { //Allow +- 1 degree
         document.body.style.backgroundColor = "green";
         document.getElementById("heading").innerHTML = "N"; // North
+        Navigator.vibrate(200);
       }
       else if (heading > 179 && heading < 181){ //Allow +- 1 degree
         document.body.style.backgroundColor = "green";
