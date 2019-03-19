@@ -91,14 +91,16 @@ function handleMotion(event) {
 
 }
 
-let magSensor = new Magnetometer({frequency: 60});
+let sensor = new Magnetometer();
+sensor.start();
 
-magSensor.addEventListener('reading', e => {
-  console.log("Magnetic field along the X-axis " + magSensor.x);
-  console.log("Magnetic field along the Y-axis " + magSensor.y);
-  console.log("Magnetic field along the Z-axis " + magSensor.z);
-});
-magSensor.start();
+sensor.onreading = () => {
+    console.log("Magnetic field along the X-axis " + sensor.x);
+    console.log("Magnetic field along the Y-axis " + sensor.y);
+    console.log("Magnetic field along the Z-axis " + sensor.z);
+};
+
+sensor.onerror = event => console.log(event.error.name, event.error.message);
 
 
 window.addEventListener("devicemotion", handleMotion, true);
