@@ -78,11 +78,8 @@ function handleMotion(event) {
 
 
   output2.innerHTML  = "acceleration x: " + x + "\n";
-  console.log("acceleration x: " + x);
   output2.innerHTML  = "acceleration y: " + y + "\n";
-  console.log("acceleration y: " + y);
   output2.innerHTML  = "acceleration z: " + z + "\n";
-  console.log("acceleration x: " + z);
   output2.innerHTML  = "acceleration x: " + x + "\n";
   output2.innerHTML  = "acceleration y: " + y + "\n";
   output2.innerHTML += "accelerationIncludingGravity: " + n + "\n";
@@ -93,6 +90,16 @@ function handleMotion(event) {
 
 
 }
+
+let magSensor = new Magnetometer({frequency: 60});
+
+magSensor.addEventListener('reading', e => {
+  console.log("Magnetic field along the X-axis " + magSensor.x);
+  console.log("Magnetic field along the Y-axis " + magSensor.y);
+  console.log("Magnetic field along the Z-axis " + magSensor.z);
+});
+magSensor.start();
+
 
 window.addEventListener("devicemotion", handleMotion, true);
 window.addEventListener('deviceorientation', handleOrientation);
