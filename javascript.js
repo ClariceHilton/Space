@@ -54,13 +54,13 @@ function handleMotion(event) {
   var g = event.rotationRate.gamma;
   var p = event.interval;
 
-  if (z>0.5 && z<1) {
+  if (z>0.2 && z<0.8) {
     document.body.style.backgroundColor = "green";
   }
-  if (z>-0.5 && z<0.5) {
+  if (z>-0.4 && z<0.5) {
     document.body.style.backgroundColor = "blue";
   }
-  if (z>-0.5 && z<-1){
+  if (z>-1.2 && z<-0.4){
     document.body.style.backgroundColor = "magenta";
   }
 
