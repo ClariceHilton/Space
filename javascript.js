@@ -82,29 +82,29 @@ function handleMotion(event) {
     document.body.style.backgroundColor = "grey";
   }
 
+  navigator.geolocation.getCurrentPosition(function(location) {
+    output2.innerHTML  = "location lat: " + location.coords.latitude + "\n";
+    output2.innerHTML  = "location long: " + location.coords.longitude + "\n";
+    output2.innerHTML  = "location accuracy: " + location.coords.accuracy + "\n";
 
-  output2.innerHTML  = "acceleration x: " + x + "\n";
-  output2.innerHTML  = "acceleration y: " + y + "\n";
-  output2.innerHTML  = "acceleration z: " + z + "\n";
-  output2.innerHTML  = "acceleration x: " + x + "\n";
-  output2.innerHTML  = "acceleration y: " + y + "\n";
-  output2.innerHTML += "accelerationIncludingGravity: " + n + "\n";
-  output2.innerHTML += "rotationRatealpha: " + a + "\n";
-  output2.innerHTML += "rotationRatebeta: " + b + "\n";
-  output2.innerHTML += "rotationRategamma: " + g + "\n";
-  output2.innerHTML += "interval: " + p + "\n";
+  });
+  //output2.innerHTML  = "acceleration x: " + x + "\n";
+  //output2.innerHTML  = "acceleration y: " + y + "\n";
+  //output2.innerHTML  = "acceleration z: " + z + "\n";
+  //output2.innerHTML  = "acceleration x: " + x + "\n";
+  //output2.innerHTML  = "acceleration y: " + y + "\n";
+  //output2.innerHTML += "accelerationIncludingGravity: " + n + "\n";
+  //output2.innerHTML += "rotationRatealpha: " + a + "\n";
+  //output2.innerHTML += "rotationRatebeta: " + b + "\n";
+  //output2.innerHTML += "rotationRategamma: " + g + "\n";
+  //output2.innerHTML += "interval: " + p + "\n";
 
 
 }
 
 
-
 window.addEventListener("devicemotion", handleMotion, true);
 window.addEventListener('deviceorientation', handleOrientation);
-navigator.geolocation.getCurrentPosition(function(location) {
-  console.log(location.coords.latitude);
-  console.log(location.coords.longitude);
-  console.log(location.coords.accuracy);
-});
+
 
 //var successBool = window.navigator.vibrate(pattern);
