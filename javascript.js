@@ -60,7 +60,7 @@ function handleMotion(event) {
   var g = event.rotationRate.gamma;
   var p = event.interval;
 
-  if (z>1.2) {
+  /*if (z>1.2) {
     document.body.style.backgroundColor = "white";
   }
   if (z>0.8 && z<1.2) {
@@ -80,7 +80,7 @@ function handleMotion(event) {
   }
   if (z<-1) {
     document.body.style.backgroundColor = "grey";
-  }
+  }*/
 
   navigator.geolocation.getCurrentPosition(function(location) {
     var p = location.coords.latitude;
