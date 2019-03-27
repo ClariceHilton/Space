@@ -83,8 +83,11 @@ function handleMotion(event) {
   }
 
   navigator.geolocation.getCurrentPosition(function(location) {
-    output2.innerHTML  = "location lat: " + location.coords.latitude + "\n";
-    output2.innerHTML  = "location long: " + location.coords.longitude + "\n";
+    var p = location.coords.latitude;
+    var q = location.coords.longitude;
+    console.log('lat: '+ p + " long: " +q );
+    output2.innerHTML  = "location lat: " + p + "\n";
+    output2.innerHTML  = "location long: " + q + "\n";
     output2.innerHTML  = "location accuracy: " + location.coords.accuracy + "\n";
 
   });
