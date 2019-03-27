@@ -1,3 +1,8 @@
+// https://stackoverflow.com/questions/6647314/how-can-i-find-distance-traveled-with-a-gyroscope-and-accelerometer
+// https://stackoverflow.com/questions/6647314/how-can-i-find-distance-traveled-with-a-gyroscope-and-accelerometer
+// https://stackoverflow.com/questions/5214197/simple-iphone-motion-detect/5220796#5220796
+//https://stackoverflow.com/questions/20745066/how-to-compare-accelerometer-values-in-ios-and-android
+//https://answers.unity.com/questions/225773/accelerometer-axis-differences-on-android-and-ios.html
 var ball = document.querySelector('.ball');
 var garden = document.querySelector('.garden');
 var output = document.querySelector('.output');
@@ -14,6 +19,7 @@ function handleOrientation(event) {
   var z = event.alpha;
   var webkit = event.webkitCompassHeading;
   var accuracy = event.webkitCompassAccuracy;
+  var mag = event.magnetometer
 
 
   output.innerHTML  = "beta : " + x + "\n";
@@ -91,17 +97,14 @@ function handleMotion(event) {
 
 }
 
-let accelerometer = new Accelerometer({frequency: 60});
-
-accelerometer.addEventListener('reading', e => {
-  console.log("Acceleration along the X-axis " + accelerometer.x);
-  console.log("Acceleration along the Y-axis " + accelerometer.y);
-  console.log("Acceleration along the Z-axis " + accelerometer.z);
-});
-accelerometer.start();
 
 
 window.addEventListener("devicemotion", handleMotion, true);
 window.addEventListener('deviceorientation', handleOrientation);
+navigator.geolocation.getCurrentPosition(function(location) {
+  console.log(location.coords.latitude);
+  console.log(location.coords.longitude);
+  console.log(location.coords.accuracy);
+});
 
 //var successBool = window.navigator.vibrate(pattern);
