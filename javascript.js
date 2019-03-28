@@ -1,8 +1,13 @@
 // https://stackoverflow.com/questions/6647314/how-can-i-find-distance-traveled-with-a-gyroscope-and-accelerometer
-// https://stackoverflow.com/questions/6647314/how-can-i-find-distance-traveled-with-a-gyroscope-and-accelerometer
 // https://stackoverflow.com/questions/5214197/simple-iphone-motion-detect/5220796#5220796
 //https://stackoverflow.com/questions/20745066/how-to-compare-accelerometer-values-in-ios-and-android
 //https://answers.unity.com/questions/225773/accelerometer-axis-differences-on-android-and-ios.html
+//https://github.com/intel/generic-sensor-demos
+//https://github.com/dorukeker/gyronorm-element
+//https://stackoverflow.com/questions/4449565/getting-displacement-from-accelerometer-data-with-core-motion/4635095#4635095
+//https://stackoverflow.com/questions/12926459/calculating-distance-using-linear-acceleration-android
+//https://stackoverflow.com/questions/6647314/how-can-i-find-distance-traveled-with-a-gyroscope-and-accelerometer?noredirect=1&lq=1
+//https://blog.contus.com/how-to-measure-acceleration-in-smartphones-using-accelerometer/
 var ball = document.querySelector('.ball');
 var garden = document.querySelector('.garden');
 var output = document.querySelector('.output');
@@ -10,6 +15,9 @@ var output2 = document.querySelector('.output2');
 
 var maxX = garden.clientWidth  - ball.clientWidth;
 var maxY = garden.clientHeight - ball.clientHeight;
+var dx=0.0f;
+var vx=0.0f;
+
 
 function handleOrientation(event) {
 
@@ -60,6 +68,15 @@ function handleMotion(event) {
   var g = event.rotationRate.gamma;
   var p = event.interval;
 
+
+for (int i=1; i<n; i++)
+ {
+   vx=vx+x/1000;
+   output2.innerHTML  = "x: \n";
+   output2.innerHTML  = "x: \n";
+   output2.innerHTML  = "x: " + vx + "\n";
+ }
+
   /*if (z>1.2) {
     document.body.style.backgroundColor = "white";
   }
@@ -80,7 +97,7 @@ function handleMotion(event) {
   }
   if (z<-1) {
     document.body.style.backgroundColor = "grey";
-  }*/
+  }
 
   navigator.geolocation.getCurrentPosition(function(location) {
     var p = location.coords.latitude;
@@ -92,16 +109,16 @@ function handleMotion(event) {
     output2.innerHTML  = "location long: " + q + "\n";
 
   });
-  //output2.innerHTML  = "acceleration x: " + x + "\n";
-  //output2.innerHTML  = "acceleration y: " + y + "\n";
-  //output2.innerHTML  = "acceleration z: " + z + "\n";
-  //output2.innerHTML  = "acceleration x: " + x + "\n";
-  //output2.innerHTML  = "acceleration y: " + y + "\n";
-  //output2.innerHTML += "accelerationIncludingGravity: " + n + "\n";
-  //output2.innerHTML += "rotationRatealpha: " + a + "\n";
-  //output2.innerHTML += "rotationRatebeta: " + b + "\n";
-  //output2.innerHTML += "rotationRategamma: " + g + "\n";
-  //output2.innerHTML += "interval: " + p + "\n";
+  output2.innerHTML  = "acceleration x: " + x + "\n";
+  output2.innerHTML  = "acceleration y: " + y + "\n";
+  output2.innerHTML  = "acceleration z: " + z + "\n";
+  output2.innerHTML  = "acceleration x: " + x + "\n";
+  output2.innerHTML  = "acceleration y: " + y + "\n";
+  output2.innerHTML += "accelerationIncludingGravity: " + n + "\n";
+  output2.innerHTML += "rotationRatealpha: " + a + "\n";
+  output2.innerHTML += "rotationRatebeta: " + b + "\n";
+  output2.innerHTML += "rotationRategamma: " + g + "\n";
+  output2.innerHTML += "interval: " + p + "\n";*/
 
 
 }
