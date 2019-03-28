@@ -15,8 +15,10 @@ var output2 = document.querySelector('.output2');
 
 var maxX = garden.clientWidth  - ball.clientWidth;
 var maxY = garden.clientHeight - ball.clientHeight;
-var dx=0.0;
-var vx=0.0;
+var dx=0;
+var vx=0;
+var vy=0;
+var vz=0;
 
 
 function handleOrientation(event) {
@@ -30,12 +32,12 @@ function handleOrientation(event) {
   var mag = event.magnetometer
 
 
-  output.innerHTML  = "beta : " + x + "\n";
+  /*output.innerHTML  = "beta : " + x + "\n";
   output.innerHTML += "gamma: " + y + "\n";
   output.innerHTML += "alpha: " + z + "\n";
   output.innerHTML += "absolute: " + p + "\n";
   output.innerHTML += "webkit: " + webkit + "\n";
-  output.innerHTML += "accuracy: " + accuracy + "\n";
+  output.innerHTML += "accuracy: " + accuracy + "\n";*/
 
 
   // Because we don't want to have the device upside down
@@ -68,13 +70,19 @@ function handleMotion(event) {
   var g = event.rotationRate.gamma;
   var p = event.interval;
 
-
+  output.innerHTML  = "x : " + x + "\n";
+  output.innerHTML += "y: " + y + "\n";
+  output.innerHTML += "z: " + z + "\n";
 
    vx=vx+x/1000;
+   vy=vy+y/1000;
+   vz=vz+z/1000;
    output2.innerHTML  = "x: \n";
    output2.innerHTML  = "x: \n";
    output2.innerHTML  = "x: " + vx + "\n";
- 
+   output2.innerHTML  = "x: " + vy + "\n";
+   output2.innerHTML  = "x: " + vz + "\n";
+
 
   /*if (z>1.2) {
     document.body.style.backgroundColor = "white";
