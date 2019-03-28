@@ -80,10 +80,10 @@ function handleMotion(event) {
 if (x<0.2 && x> -0.2) {
   vx = 0;
 }
-if (y > 0.2 || y < -0.2){
+if (y > 0.5 || y < -0.5){
   vy=vy+y*0.001;
 }
-if (y<0.2 && y> -0.2) {
+if (y<0.5 && y> -0.5) {
 vy = 0;
 }
 
