@@ -80,18 +80,21 @@ function handleMotion(event) {
 if (x<0.2 && x> -0.2) {
   vx = 0;
 }
+if (y > 0.2 || y < -0.2){
+  vy=vy+y*0.001;
+}
+if (y<0.2 && y> -0.2) {
+vy = 0;
+}
 
-  if (vx > 0.1||vx<-0.1){
-    console.log('yes2');
-  }
 
    vy=vy+y/10;
    vz=vz+z/1000;
    output2.innerHTML  = "x: \n";
    output2.innerHTML  = "x: \n";
-   output2.innerHTML  = "x: " + vx + "\n";
-   /*output2.innerHTML  = "y: " + vy + "\n";
-   output2.innerHTML  = "z: " + vz + "\n";*/
+   //output2.innerHTML  = "x: " + vx + "\n";
+   output2.innerHTML  = "y: " + vy + "\n";
+   //output2.innerHTML  = "z: " + vz + "\n";
 
 
   /*if (z>1.2) {
