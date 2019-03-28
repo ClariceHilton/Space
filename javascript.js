@@ -15,8 +15,8 @@ var output2 = document.querySelector('.output2');
 
 var maxX = garden.clientWidth  - ball.clientWidth;
 var maxY = garden.clientHeight - ball.clientHeight;
-var dx=0.0f;
-var vx=0.0f;
+var dx=0.0;
+var vx=0.0;
 
 
 function handleOrientation(event) {
@@ -69,13 +69,12 @@ function handleMotion(event) {
   var p = event.interval;
 
 
-for (int i=1; i<n; i++)
- {
+
    vx=vx+x/1000;
    output2.innerHTML  = "x: \n";
    output2.innerHTML  = "x: \n";
    output2.innerHTML  = "x: " + vx + "\n";
- }
+ 
 
   /*if (z>1.2) {
     document.body.style.backgroundColor = "white";
