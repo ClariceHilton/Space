@@ -76,7 +76,10 @@ function handleMotion(event) {
 
   if (x > 0.1 || x < -0.1){
     vx=vx+x*0.001;
-    console.log("yes")
+
+  }
+  if (vx > 0.1||vx<-0.1){
+    console.log('yes2');
   }
 
    vy=vy+y/10;
