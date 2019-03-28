@@ -74,14 +74,14 @@ function handleMotion(event) {
   output.innerHTML += "y: " + y + "\n";
   output.innerHTML += "z: " + z + "\n";
 
-   vx=vx+x/1000;
-   vy=vy+y/1000;
+   vx=vx+x*0.001;
+   vy=vy+y/10;
    vz=vz+z/1000;
    output2.innerHTML  = "x: \n";
    output2.innerHTML  = "x: \n";
    output2.innerHTML  = "x: " + vx + "\n";
-   output2.innerHTML  = "x: " + vy + "\n";
-   output2.innerHTML  = "x: " + vz + "\n";
+   output2.innerHTML  = "y: " + vy + "\n";
+   output2.innerHTML  = "z: " + vz + "\n";
 
 
   /*if (z>1.2) {
