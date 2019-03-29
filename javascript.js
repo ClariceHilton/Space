@@ -70,9 +70,9 @@ function handleMotion(event) {
   var g = event.rotationRate.gamma;
   var p = event.interval;
 
-  output.innerHTML  = "x : " + x + "\n";
+  /*output.innerHTML  = "x : " + x + "\n";
   output.innerHTML += "y: " + y + "\n";
-  output.innerHTML += "z: " + z + "\n";
+  output.innerHTML += "z: " + z + "\n";*/
 
   if (x > 0.2 || x < -0.2){
     vx=vx+x*0.001;
@@ -149,3 +149,19 @@ window.addEventListener('deviceorientation', handleOrientation);
 
 
 //var successBool = window.navigator.vibrate(pattern);
+
+//battery
+
+navigator.getBattery().then(function(battery) {
+
+    var level = battery.level;
+    if (level < 100 && level > 75){
+      output.innerHTML  = "you got the juice";
+    } else if (level <=75 || level >30) {
+      output.innerHTML  = "you might want to put this lil folk on charge";
+    } else if (level<=30) {
+      output.innerHTML  = "you better get to the charging station ASAP";
+    } else {
+      output.innerHTML  = "you got some security here";
+    }
+});
