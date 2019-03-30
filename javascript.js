@@ -20,7 +20,19 @@ var pvx;
 var vx=0;
 var vy=0;
 var vz=0;
+var device;
 
+if( /Android/i.test(navigator.userAgent) ) {
+  device = "Android";
+
+} else if (/iPhone|iPad|iPod/i.test) {
+  device = "IOS";
+
+} else {
+  device = "unknown";
+}
+
+output2.innerHTML  = device;
 
 function handleOrientation(event) {
 
@@ -102,7 +114,7 @@ function handleMotion(event) {
    vz=vz+z/1000;
    output2.innerHTML  = "x: \n";
    output2.innerHTML  = "x: \n";
-   output2.innerHTML  = "x: " + x + "\n";
+   output2.innerHTML  = "x: " + vx + "\n";
    //output2.innerHTML  = "y: " + vy + "\n";
    //output2.innerHTML  = "z: " + vz + "\n";
 
@@ -175,3 +187,23 @@ window.addEventListener('deviceorientation', handleOrientation);
       output.innerHTML  = "you got some security here";
     }
 });*/
+
+function getMobileOperatingSystem() {
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      // Windows Phone must come first because its UA also contains "Android"
+    if (/windows phone/i.test(userAgent)) {
+        return "Windows Phone";
+    }
+
+    if (/android/i.test(userAgent)) {
+        return "Android";
+    }
+
+    // iOS detection from: http://stackoverflow.com/a/9039885/177710
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return "iOS";
+    }
+
+    return "unknown";
+}
