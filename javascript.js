@@ -89,7 +89,7 @@ if (y<0.5 && y> -0.5) {
 vy = 0;
 }
 
-if (vx > 1|| vx< -1) {
+if (vx > 0.1|| vx< -0.1) {
   document.body.style.backgroundColor = "yellow";
 } else {
   document.body.style.backgroundColor = "white";
