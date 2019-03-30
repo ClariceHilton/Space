@@ -87,6 +87,10 @@ if (y<0.5 && y> -0.5) {
 vy = 0;
 }
 
+if (vx > 1) {
+  document.body.style.backgroundColor = "yellow";
+}
+
 
    vy=vy+y/10;
    vz=vz+z/1000;
