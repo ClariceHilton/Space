@@ -79,7 +79,7 @@ function handleMotion(event) {
     pvx = vx;
     vx=vx+x*0.001;
   }
-  if (x < 0.1 && x > -0.1){
+  if (x < 0.01 && x > -0.01){
 
     vx=0;
   }
