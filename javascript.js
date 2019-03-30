@@ -32,6 +32,7 @@ if( /Android/i.test(navigator.userAgent) ) {
   device = "unknown";
 }
 
+console.log(device);
 output2.innerHTML  = device;
 
 function handleOrientation(event) {
@@ -112,9 +113,9 @@ function handleMotion(event) {
 
    vy=vy+y/10;
    vz=vz+z/1000;
-   output2.innerHTML  = "x: \n";
-   output2.innerHTML  = "x: \n";
-   output2.innerHTML  = "x: " + vx + "\n";
+   //output2.innerHTML  = "x: \n";
+   //output2.innerHTML  = "x: \n";
+   //output2.innerHTML  = "x: " + vx + "\n";
    //output2.innerHTML  = "y: " + vy + "\n";
    //output2.innerHTML  = "z: " + vz + "\n";
 
