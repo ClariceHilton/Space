@@ -102,7 +102,7 @@ function handleMotion(event) {
    vz=vz+z/1000;
    output2.innerHTML  = "x: \n";
    output2.innerHTML  = "x: \n";
-   output2.innerHTML  = "x: " + vx + "\n";
+   output2.innerHTML  = "x: " + x + "\n";
    //output2.innerHTML  = "y: " + vy + "\n";
    //output2.innerHTML  = "z: " + vz + "\n";
 
