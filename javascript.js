@@ -16,6 +16,7 @@ var output2 = document.querySelector('.output2');
 var maxX = garden.clientWidth  - ball.clientWidth;
 var maxY = garden.clientHeight - ball.clientHeight;
 var dx=0;
+var pvx;
 var vx=0;
 var vy=0;
 var vz=0;
@@ -75,13 +76,12 @@ function handleMotion(event) {
   output.innerHTML += "z: " + z + "\n";*/
 
   if (x > 0.2 || x < -0.3){
-
+    pvx = vx;
     vx=vx+x*0.001;
   }
-/*if (vx<0.01 && vx> -0.01) {
-  vx = 0;
-}*/
-if
+
+
+
 if (y > 0.5 || y < -0.5){
   vy=vy+y*0.001;
 }
