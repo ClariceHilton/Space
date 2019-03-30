@@ -87,8 +87,10 @@ if (y<0.5 && y> -0.5) {
 vy = 0;
 }
 
-if (vx > 1|| vx<1) {
+if (vx > 3|| vx<3) {
   document.body.style.backgroundColor = "yellow";
+} else {
+  document.body.style.backgroundColor = "white";
 }
 
 
@@ -96,8 +98,8 @@ if (vx > 1|| vx<1) {
    vz=vz+z/1000;
    output2.innerHTML  = "x: \n";
    output2.innerHTML  = "x: \n";
-   //output2.innerHTML  = "x: " + vx + "\n";
-   output2.innerHTML  = "y: " + vy + "\n";
+   output2.innerHTML  = "x: " + vx + "\n";
+   //output2.innerHTML  = "y: " + vy + "\n";
    //output2.innerHTML  = "z: " + vz + "\n";
 
 
@@ -156,7 +158,7 @@ window.addEventListener('deviceorientation', handleOrientation);
 
 //battery
 
-navigator.getBattery().then(function(battery) {
+/*navigator.getBattery().then(function(battery) {
 
     var level = battery.level;
     if (level < 100 && level > 75){
@@ -168,4 +170,4 @@ navigator.getBattery().then(function(battery) {
     } else {
       output.innerHTML  = "you got some security here";
     }
-});
+});*/
