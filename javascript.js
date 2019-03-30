@@ -79,21 +79,23 @@ function handleMotion(event) {
     pvx = vx;
     vx=vx+x*0.001;
   }
+  if (x < 0.1 && x > -0.1){
 
+    vx=0;
+  }
 
+  if (y > 0.5 || y < -0.5){
+    vy=vy+y*0.001;
+  }
+  if (y<0.5 && y> -0.5) {
+  vy = 0;
+  }
 
-if (y > 0.5 || y < -0.5){
-  vy=vy+y*0.001;
-}
-if (y<0.5 && y> -0.5) {
-vy = 0;
-}
-
-if (vx > 0.1|| vx< -0.1) {
-  document.body.style.backgroundColor = "yellow";
-} else {
-  document.body.style.backgroundColor = "white";
-}
+  if (vx > 0.1|| vx< -0.1) {
+    document.body.style.backgroundColor = "yellow";
+  } else {
+    document.body.style.backgroundColor = "white";
+  }
 
 
    vy=vy+y/10;
