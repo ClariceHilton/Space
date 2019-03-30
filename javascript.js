@@ -91,7 +91,7 @@ function handleMotion(event) {
   vy = 0;
   }
 
-  if (vx > 0.01|| vx< -0.01) {
+  if (vx > 0.05|| vx< -0.05) {
     document.body.style.backgroundColor = "yellow";
   } else {
     document.body.style.backgroundColor = "white";
