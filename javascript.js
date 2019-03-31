@@ -15,7 +15,7 @@ var output2 = document.querySelector('.output2');
 
 var maxX = garden.clientWidth  - ball.clientWidth;
 var maxY = garden.clientHeight - ball.clientHeight;
-console.log(maxY);
+
 var dx=0;
 var pvx;
 var vx=0;
@@ -37,6 +37,7 @@ if( /Android/i.test(navigator.userAgent) ) {
 
 function handleOrientation(event) {
 
+  console.log(maxY);
   var p = event.absolute;
   var x = event.beta;  // In degree in the range [-180,180]
   var y = event.gamma; // In degree in the range [-90,90]
