@@ -15,6 +15,7 @@ var output2 = document.querySelector('.output2');
 
 var maxX = garden.clientWidth  - ball.clientWidth;
 var maxY = garden.clientHeight - ball.clientHeight;
+console.log(maxY);
 var dx=0;
 var pvx;
 var vx=0;
