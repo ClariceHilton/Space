@@ -13,8 +13,8 @@ var garden = document.querySelector('.garden');
 var output = document.querySelector('.output');
 var output2 = document.querySelector('.output2');
 
-//var maxX = garden.clientWidth  - ball.clientWidth;
-//var maxY = garden.clientHeight - ball.clientHeight;
+var maxX = garden.clientWidth  - ball.clientWidth;
+var maxY = garden.clientHeight - ball.clientHeight;
 var dx=0;
 var pvx;
 var vx=0;
