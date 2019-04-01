@@ -77,13 +77,14 @@
           } else {
             north = 1;
           }*/
-
+console.log("north");
 
         }
         else if (heading > 179 && heading < 181){ //Allow +- 1 degree
           document.getElementById("3").style = "green";
           document.getElementById("3").innerHTML = "S"; // South
           north = 1;
+          console.log("south");
         }
     else { // Otherwise, use near black
        document.body.style.backgroundColor = "#161616";
@@ -100,9 +101,9 @@
     else {
      alert("Sorry, try again on a compatible mobile device!");
     }
-    if (north = 1){
+    /*if (north = 1){
       swiper.slideTo(4, 0)
-    }
+    }-->*/
     }
   });
 
