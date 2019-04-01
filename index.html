@@ -35,10 +35,10 @@
     <div class="swiper-slide">Slide 10</div>
   </div>
 </div>
-
+<!--
 <pre class="output"></pre>
 <pre class="output2"></pre>
-<script src="javascript.js"></script>
+<script src="javascript.js"></script>-->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
 
@@ -54,12 +54,12 @@
     if (typeof event.webkitCompassHeading !== "undefined") {
       alpha = event.webkitCompassHeading; //iOS non-standard
       var heading = alpha
-      document.getElementById("Slide3").innerHTML = heading.toFixed([0]);
+      document.getElementById("heading").innerHTML = heading.toFixed([0]);
     }
     else {
       alert("Your device is reporting relative alpha values, so this compass won't point north :(");
       var heading = 360 - alpha; //heading [0, 360)
-      document.getElementById("Slide3").innerHTML = heading.toFixed([0]);
+      document.getElementById("heading").innerHTML = heading.toFixed([0]);
     }
 
     // Change backgroud colour based on heading
