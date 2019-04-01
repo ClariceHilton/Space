@@ -72,7 +72,7 @@
           document.getElementById("3").style = "green";
           document.getElementById("3").innerHTML = "N"; // North
           navigator.vibrate([200, 400, 200]);
-        
+
             north = 1;
 
 console.log(north);
@@ -82,7 +82,7 @@ console.log(north);
           document.getElementById("3").style = "green";
           document.getElementById("3").innerHTML = "S"; // South
           north = 1;
-          console.log("south");
+          swiper.slideTo(4, 0)
         }
     else { // Otherwise, use near black
        document.body.style.backgroundColor = "#161616";
@@ -99,9 +99,7 @@ console.log(north);
     else {
      alert("Sorry, try again on a compatible mobile device!");
     }
-    if (north == 1){
-      swiper.slideTo(4, 0)
-    }
+
     }
   });
 
