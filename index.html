@@ -61,7 +61,7 @@
           document.getElementById("3").innerHTML = heading.toFixed([0]);
         }
         else {
-          
+
           var heading = 360 - alpha; //heading [0, 360)
           document.getElementById("3").innerHTML = heading.toFixed([0]);
         }
@@ -74,8 +74,6 @@
           navigator.vibrate([200, 400, 200]);
 
             north = 1;
-
-console.log(north);
 
         }
         else if (heading > 179 && heading < 181){ //Allow +- 1 degree
