@@ -129,7 +129,7 @@ function handleMotion(event) {
 
 
 window.addEventListener("devicemotion", handleMotion, true);
-window.addEventListener('deviceorientation', handleOrientation);
+//window.addEventListener('deviceorientation', handleOrientation);
 
 
 //var successBool = window.navigator.vibrate(pattern);

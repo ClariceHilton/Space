@@ -25,3 +25,8 @@ html, body {
 .output2 {
   height: 20px;
 }
+/*SWIPER */
+.swiper-container {
+    width: 600px;
+    height: 300px;
+}
