@@ -60,3 +60,8 @@ body {
   -webkit-align-items: center;
   align-items: center;
 }
+.slide3 {
+  allowSlidePrev: true;
+	allowSlideNext: true;
+  noSwipping: true;
+}

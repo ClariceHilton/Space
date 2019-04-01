@@ -8,21 +8,25 @@
 //https://stackoverflow.com/questions/12926459/calculating-distance-using-linear-acceleration-android
 //https://stackoverflow.com/questions/6647314/how-can-i-find-distance-traveled-with-a-gyroscope-and-accelerometer?noredirect=1&lq=1
 //https://blog.contus.com/how-to-measure-acceleration-in-smartphones-using-accelerometer/
+
+//variables for ball around screen
 var ball = document.querySelector('.ball');
 var garden = document.querySelector('.garden');
 var output = document.querySelector('.output');
 var output2 = document.querySelector('.output2');
-
 var maxX = garden.clientWidth  - ball.clientWidth;
 var maxY = garden.clientHeight - ball.clientHeight;
 
+//variables for understanding acceleration
 var dx=0;
 var pvx;
 var vx=0;
 var vy=0;
 var vz=0;
+//stores what device is connected
 var device;
 
+//function for what device is connected
 if( /Android/i.test(navigator.userAgent) ) {
   device = "Android";
 
@@ -33,7 +37,7 @@ if( /Android/i.test(navigator.userAgent) ) {
   device = "unknown";
 }
 
-
+//device stores 
 function handleMotion(event) {
 
   var x = event.acceleration.x;
