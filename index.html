@@ -72,12 +72,10 @@
           document.getElementById("3").style = "green";
           document.getElementById("3").innerHTML = "N"; // North
           navigator.vibrate([200, 400, 200]);
-          /*if (noNorth == 0){
-            noNorth++
-          } else {
+        
             north = 1;
-          }*/
-console.log("north");
+
+console.log(north);
 
         }
         else if (heading > 179 && heading < 181){ //Allow +- 1 degree
@@ -101,9 +99,9 @@ console.log("north");
     else {
      alert("Sorry, try again on a compatible mobile device!");
     }
-    /*if (north = 1){
+    if (north == 1){
       swiper.slideTo(4, 0)
-    }-->*/
+    }
     }
   });
 
