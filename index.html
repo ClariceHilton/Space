@@ -44,9 +44,12 @@
 
 <!-- Initialize Swiper -->
 <script>
+  var north = false;
   var swiper = new Swiper('.swiper-container');
   // Get event data
   function deviceOrientationListener(event) {
+    console.log(swiper.realIndex)
+
     var alpha    = event.alpha; //z axis rotation [0,360)
     var beta     = event.beta; //x axis rotation [-180, 180]
     var gamma    = event.gamma; //y axis rotation [-90, 90]
@@ -89,6 +92,7 @@ else if(window.DeviceOrientationEvent){
 else {
  alert("Sorry, try again on a compatible mobile device!");
 }
+
 
 </script>
 
