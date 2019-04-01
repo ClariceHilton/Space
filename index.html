@@ -72,17 +72,18 @@
           document.getElementById("3").style = "green";
           document.getElementById("3").innerHTML = "N"; // North
           navigator.vibrate([200, 400, 200]);
-          if (noNorth == 0){
+          /*if (noNorth == 0){
             noNorth++
           } else {
             north = 1;
-          }
+          }*/
 
 
         }
         else if (heading > 179 && heading < 181){ //Allow +- 1 degree
           document.getElementById("3").style = "green";
           document.getElementById("3").innerHTML = "S"; // South
+          north = 1;
         }
     else { // Otherwise, use near black
        document.body.style.backgroundColor = "#161616";
