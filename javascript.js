@@ -129,7 +129,7 @@ function handleMotion(event) {
 
 
 window.addEventListener("devicemotion", handleMotion, true);
-//window.addEventListener('deviceorientation', handleOrientation);
+window.addEventListener('deviceorientation', handleOrientation);
 
 
 //var successBool = window.navigator.vibrate(pattern);
@@ -170,7 +170,7 @@ function getMobileOperatingSystem() {
     return "unknown";
 }
 
-/*function handleOrientation(event) {
+function handleOrientation(event) {
 
   var p = event.absolute;
   var x = event.beta;  // In degree in the range [-180,180]
@@ -204,4 +204,4 @@ function getMobileOperatingSystem() {
   ball.style.top  = (maxX*x/180 - 10) + "px";
   ball.style.left = (maxY*y/180 - 10) + "px";
   console.log((maxX*x/180 - 10) + "px");
-}*/
+}
