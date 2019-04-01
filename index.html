@@ -54,25 +54,25 @@
     if (typeof event.webkitCompassHeading !== "undefined") {
       alpha = event.webkitCompassHeading; //iOS non-standard
       var heading = alpha;
-      document.getElementById("Slide3").innerHTML = heading.toFixed([0]);
+      document.getElementById("3").innerHTML = heading.toFixed([0]);
     }
     else {
       alert("Your device is reporting relative alpha values, so this compass won't point north :(");
       var heading = 360 - alpha; //heading [0, 360)
-      document.getElementById("Slide3").innerHTML = heading.toFixed([0]);
+      document.getElementById("3").innerHTML = heading.toFixed([0]);
     }
 
     // Change backgroud colour based on heading
     // Green for North and South, black otherwise
     if (heading > 359 || heading < 1) { //Allow +- 1 degree
-      document.getElementById("Slide3").style = "green";
-      document.getElementById("Slide3").innerHTML = "N"; // North
+      document.getElementById("3").style = "green";
+      document.getElementById("3").innerHTML = "N"; // North
       navigator.vibrate([200, 400, 200]);
 
     }
     else if (heading > 179 && heading < 181){ //Allow +- 1 degree
-      document.getElementById("Slide3").style = "green";
-      document.getElementById("Slide3").innerHTML = "S"; // South
+      document.getElementById("3").style = "green";
+      document.getElementById("3").innerHTML = "S"; // South
     }
 else { // Otherwise, use near black
    document.body.style.backgroundColor = "#161616";
