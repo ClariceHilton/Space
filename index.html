@@ -53,7 +53,7 @@
     //Check if absolute values have been sent
     if (typeof event.webkitCompassHeading !== "undefined") {
       alpha = event.webkitCompassHeading; //iOS non-standard
-      var heading = alpha
+      var heading = alpha;
       document.getElementById("heading").innerHTML = heading.toFixed([0]);
     }
     else {
