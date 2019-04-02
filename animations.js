@@ -45,10 +45,10 @@ if (swiper.realIndex == 1) {
 
       console.log('here x:' + x + " y: " + y + " z: " +)z;
     }
-    tool.onMouseDown = function(event) {
+    /*tool.onMouseDown = function(event) {
       console.log(event.point);
         myPath.add(event.point);
-    }
+    }*/
 
     window.addEventListener('deviceorientation', handleOrientation);
 
