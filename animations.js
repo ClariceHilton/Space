@@ -1,4 +1,4 @@
-
+console.log("here");
 function handleOrientation(event) {
 
   var p = event.absolute;
