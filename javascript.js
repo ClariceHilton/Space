@@ -9,6 +9,10 @@
 //https://stackoverflow.com/questions/6647314/how-can-i-find-distance-traveled-with-a-gyroscope-and-accelerometer?noredirect=1&lq=1
 //https://blog.contus.com/how-to-measure-acceleration-in-smartphones-using-accelerometer/
 
+// for gyroscope http://paperjs.org/tutorials/interaction/working-with-mouse-vectors/
+
+
+
 //variables for ball around screen
 var ball = document.querySelector('.ball');
 var garden = document.querySelector('.garden');
@@ -37,7 +41,7 @@ if( /Android/i.test(navigator.userAgent) ) {
   device = "unknown";
 }
 
-//device stores 
+//device stores
 function handleMotion(event) {
 
   var x = event.acceleration.x;

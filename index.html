@@ -7,19 +7,43 @@
 <!-- normalises gyro https://www.npmjs.com/package/gyronorm -->
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+<script type="text/javascript" src="paper-full.min.js"></script>
+<!-- Define inlined JavaScript -->
+    <script type="text/javascript">
+        // Only executed our code once the DOM is ready.
+        window.onload = function() {
+            // Get a reference to the canvas object
+            var canvas = document.getElementById('myCanvas');
+            // Create an empty project and a view for the canvas:
+            paper.setup(canvas);
+
+            var myPath = new paper.Path();
+            myPath.strokeColor = 'black';
+
+            // Draw the view now:
+            paper.view.draw();
+
+            var tool = new paper.Tool();
+
+            tool.onMouseDown = function(event) {
+              console.log("here");
+                myPath.add(event.point);
+            }
+        }
+    </script>
 
 </head>
 <body>
-
+<canvas id="myCanvas" resize>
   <!-- Slider main container -->
   <!-- Slider main container -->
   <div class="swiper-container">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
 
-        <div class="garden">
+      <!--  <div class="garden">
           <div class="ball"></div>
-        </div>
+        </div>-->
 
 </div>
     <div id="2" class="swiper-slide">Slide 2</div>
@@ -75,6 +99,7 @@
 
             north = 1;
 
+
         }
         else if (heading > 179 && heading < 181){ //Allow +- 1 degree
           document.getElementById("3").style = "green";
@@ -103,6 +128,6 @@
 
 
 </script>
-
+  </canvas>
 </body>
 </html>
