@@ -1,8 +1,8 @@
-console.log("here");
+
 
 swiper.on('slideChange', function() {
 if (swiper.realIndex == 1) {
-  console.log("aqui");
+
     // Get a reference to the canvas object
     var canvas = document.getElementById('myCanvas');
     // Create an empty project and a view for the canvas:
@@ -37,7 +37,7 @@ if (swiper.realIndex == 1) {
 
       // To make computation easier we shift the range of
       // x and y to [0,180]
-      x += 90;
+      /*x += 90;
       y += 90;
 
       // 10 is half the size of the ball
