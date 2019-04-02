@@ -63,3 +63,7 @@ body {
 	allowSlideNext: true;
   noSwipping: true;
 }
+#myCanvas {
+  width:100%;
+  height: 100%;
+}
