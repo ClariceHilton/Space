@@ -26,7 +26,8 @@ function handleOrientation(event) {
   myPath.add(x, y);
   console.log('here: ' + x + " " + y);
 }
-swiper.on( 'slideChange', function() {
+
+swiper.on('slideChange', function() {
 if (swiper.realIndex == 1) {
   console.log("aqui");
     // Get a reference to the canvas object
@@ -50,5 +51,5 @@ if (swiper.realIndex == 1) {
 
     window.addEventListener('deviceorientation', handleOrientation);
 
-}
-}
+  }
+});
