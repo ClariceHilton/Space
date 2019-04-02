@@ -1,6 +1,6 @@
 // Only executed our code once the DOM is ready.
 swiper.on( 'slideChange', function() {
-  if (swiper.realIndex == 2) {
+  if (swiper.realIndex == 1) {
     var canvas = document.getElementById('myCanvas');
     // Create an empty project and a view for the canvas:
     paper.setup(canvas);
