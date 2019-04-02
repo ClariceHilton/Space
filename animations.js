@@ -50,6 +50,7 @@ if (swiper.realIndex == 1) {
 
 
     window.addEventListener('deviceorientation', handleOrientation);
+  
 
   }
 });
