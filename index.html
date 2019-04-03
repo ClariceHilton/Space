@@ -53,10 +53,11 @@ window.globals = {
   // Get event data
   swiper.on( 'slideChange', function() {
     if (swiper.realIndex == 1) {
-      window.addEventListener('deviceorientation', handleOrientation);
+    
+  window.addEventListener('deviceorientation', handleOrientation);
 
     }
-
+  });
 </script>
 <script type="text/paperscript" canvas="myCanvas">
 // Ported from original Metaball script by SATO Hiroyuki
