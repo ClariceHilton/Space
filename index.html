@@ -83,6 +83,7 @@
     <div id= "s8" class="swiper-slide">
       <div>
         <div class="inner-text">Whilst you browse do you ever think about what information is slipping through?</div>
+        <div id="referrer" class="inner-text"></div>
         <div class="inner-text">Or do you never think about it?</div>
     </div>
     </div>
@@ -125,6 +126,7 @@ window.globals = {
   var swiper = new Swiper('.swiper-container');
   // Get event data
   swiper.on( 'slideChange', function() {
+    console.log(swiper.realIndex);
     if (swiper.realIndex == 1) {
 
 

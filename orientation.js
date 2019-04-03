@@ -1,7 +1,7 @@
 
 // get mobile type
 function getMobileOperatingSystem() {
-  console.log("hai");
+
   var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
       // Windows Phone must come first because its UA also contains "Android"
@@ -36,7 +36,7 @@ window.onload = function() {
     document.getElementById("OS").innerHTML = "Does its ease of its customisation spark joy?";
   }
   document.getElementById("referrer").innerHTML = document.referrer;
-  console.log(document.referrer);
+
 };
 
 
@@ -82,6 +82,7 @@ var vz=0;
 
 
 function deviceCompassListener(event) {
+  console.log("aqui");
   var alpha    = event.alpha; //z axis rotation [0,360)
   var beta     = event.beta; //x axis rotation [-180, 180]
   var gamma    = event.gamma; //y axis rotation [-90, 90]
