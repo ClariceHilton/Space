@@ -46,7 +46,7 @@ function handleOrientation(event) {
   ball.style.left = (maxY*y/180 - 10) + "px";*/
 globals.gx = x;
 globals.gy = y;
-  console.log('here: ' + x + " " + y);
+  //console.log('here: ' + x + " " + y);
 }
 //variables for understanding acceleration
 var dx=0;
@@ -101,7 +101,8 @@ function handleMotion(event) {
 
    globals.gvx = vx;
    globals.gvy = vy;
-   console.log("x: " + vx + "y: " + vy);
+   //console.log("x: " + vx + "y: " + vy);
+
 
 
 
