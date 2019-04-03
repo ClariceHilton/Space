@@ -91,20 +91,20 @@ function deviceCompassListener(event) {
     console.log("aqui1");
     alpha = event.webkitCompassHeading; //iOS non-standard
     var heading = alpha;
-    document.getElementById("s11").innerHTML = heading.toFixed([0]);
+    document.getElementById("s12").innerHTML = heading.toFixed([0]);
   }
   else {
 console.log("aqui2");
     var heading = 360 - alpha; //heading [0, 360)
-    document.getElementById("s11").innerHTML = heading.toFixed([0]);
-    document.getElementById("s11").style.color = blue;
+    document.getElementById("s12").innerHTML = heading.toFixed([0]);
+    document.getElementById("s12").style.color = blue;
   }
 
   // Change backgroud colour based on heading
   // Green for North and South, black otherwise
   if (heading > 359 || heading < 1) { //Allow +- 1 degree
 console.log("aqui3");
-    document.getElementById("s11").innerHTML = "N"; // North
+    document.getElementById("s12").innerHTML = "N"; // North
 
 
       north = 1;
@@ -113,7 +113,7 @@ console.log("aqui3");
   }
   else if (heading > 179 && heading < 181){ //Allow +- 1 degree
 console.log("aqui4");
-    document.getElementById("s11").innerHTML = "S"; // South
+    document.getElementById("s12").innerHTML = "S"; // South
     navigator.vibrate([200, 400, 200]);
     swiper.slideTo(12, 100)
   }
