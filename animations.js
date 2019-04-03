@@ -20,7 +20,12 @@ if (swiper.realIndex == 1) {
       console.log("here");
         myPath.add(event.point);
     }*/
-    function handleOrientation(event) {
+
+    tool.onFrame = function(event) {
+      myPath.add(globals.gx*5, globals.gy*5);
+    }
+
+    /*function handleOrientation(event) {
 
       var p = event.absolute;
       var x = event.beta;  // In degree in the range [-180,180]
@@ -44,13 +49,13 @@ if (swiper.realIndex == 1) {
       // It center the positioning point to the center of the ball
       /*ball.style.top  = (maxX*x/180 - 10) + "px";
       ball.style.left = (maxY*y/180 - 10) + "px";*/
-      myPath.add(x*5, y*5);
-      console.log('here: ' + x + " " + y);
+
+      /*console.log('here: ' + x + " " + y);
     }
 
 
-    window.addEventListener('deviceorientation', handleOrientation);
-  
+    window.addEventListener('deviceorientation', handleOrientation);*/
+
 
   }
 });
