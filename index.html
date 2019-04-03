@@ -10,9 +10,10 @@
 <script type="text/javascript" src="paper-full.min.js"></script>
 <!-- orientation script -->
 <script type="text/javascript" src="orientation.js"></script>
+<!-- rotating squares -->
 <script type="text/paperscript" src="square.js" canvas="myCanvas3"></script>
-<!--bubble interaction
-<script type="text/paperscript" src="bubbles.js" canvas="myCanvas2"></script>-->
+<!--bubble interaction-->
+<script type="text/paperscript" src="bubbles.js" canvas="myCanvas2"></script>
 
 
 </head>
@@ -23,7 +24,7 @@
     <div id="0" class="swiper-slide">
     </div>
     <div id="1" class="swiper-slide">
-      <canvas id="myCanvas3"></canvas>
+      <canvas id="myCanvas1"></canvas>
     </div>
     <div id="2" class="swiper-slide">
       <canvas id="myCanvas2"></canvas>
@@ -38,6 +39,7 @@
     <div class="swiper-slide">Slide 6</div>
     <div class="swiper-slide">Slide 7</div>
     <div class="swiper-slide">Slide 8</div>
+    <canvas id="myCanvas3"></canvas>
     <div class="swiper-slide">Slide 9</div>
     <div class="swiper-slide">Slide 10</div>
   </div>
@@ -57,14 +59,14 @@ window.globals = {
   swiper.on( 'slideChange', function() {
     if (swiper.realIndex == 1) {
 
-  /*window.addEventListener('deviceorientation', handleOrientation);*/
+  window.addEventListener('deviceorientation', handleOrientation);
   window.addEventListener("devicemotion", handleMotion, true);
     }
   });
 </script>
 
-<!-- Line animation script
-<script type="text/javascript" src="animations.js"></script>-->
+<!-- Line animation script-->
+<script type="text/javascript" src="animations.js"></script>
 
 </body>
 </html>

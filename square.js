@@ -1,6 +1,10 @@
 
+/*Copyright (c) 2011, Juerg Lehni & Jonathan Puckey
+http://lehni.org/ & http://jonathanpuckey.com/
+All rights reserved.
 
 
+*/
 var mousePoint = view.center;
 var amount = 25;
 var colors = ['red', 'white', 'blue', 'white'];
