@@ -1,4 +1,4 @@
-
+//battery
 navigator.getBattery().then(function(battery) {
 
     var level = battery.level;
@@ -8,7 +8,7 @@ navigator.getBattery().then(function(battery) {
       document.getElementById("battery").innerHTML = level * 100 + "%" ;
     } else if (level > 0.65) {
       document.getElementById("battery").innerHTML = level * 100 + "%"  ;
-    } 
+    }
 
 });
 
@@ -32,6 +32,19 @@ function getMobileOperatingSystem() {
 
     return "unknown";
 }
+var mobile = getMobileOperatingSystem();
+if (mobile == "Windows Phone") {
+  document.getElementById("OS").innerHTML = "Does its ease of your Windows customisation spark joy?"";
+} else if (mobile == "Android"){
+  document.getElementById("OS").innerHTML = "Does its ease of your Android customisation spark joy?";
+} else if (mobile == "iOS"){
+  document.getElementById("OS").innerHTML = "Does its ease of your iPhone customisation spark joy?";
+} else {
+  document.getElementById("OS").innerHTML = "Does its ease of its customisation spark joy?";
+}
+
+//get browser
+
 
 //find x y z orientation coordinates
 function handleOrientation(event) {
