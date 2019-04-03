@@ -1,6 +1,6 @@
 // Ported from original Metaball script by SATO Hiroyuki
 // http://park12.wakwak.com/~shp/lc/et/en_aics_script.html
-
+if (globals.swiperIndex >= 0){
 project.currentStyle = {
   fillColor: 'black'
 };
@@ -116,4 +116,5 @@ function getVector(radians, length) {
     angle: radians * 180 / Math.PI,
     length: length
   });
+}
 }
