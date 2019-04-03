@@ -1,5 +1,5 @@
 //battery
-/*navigator.getBattery().then(function(battery) {
+navigator.getBattery().then(function(battery) {
 
     var level = battery.level;
     if (level <= 0.35){
@@ -10,7 +10,7 @@
       document.getElementById("battery").innerHTML = level * 100 + "%"  ;
     }
 
-});*/
+});
 
 // get mobile type
 function getMobileOperatingSystem() {
@@ -140,3 +140,16 @@ function handleMotion(event) {
 
 
 }
+//battery
+navigator.getBattery().then(function(battery) {
+
+    var level = battery.level;
+    if (level <= 0.35){
+         document.getElementById("battery").innerHTML = level * 100 + "%" ;
+    } else if (level > 0.35 && level <= 0.60) {
+      document.getElementById("battery").innerHTML = level * 100 + "%" ;
+    } else if (level > 0.65) {
+      document.getElementById("battery").innerHTML = level * 100 + "%"  ;
+    }
+
+});
