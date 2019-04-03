@@ -1,30 +1,41 @@
 // Ported from original Metaball script by SATO Hiroyuki
 // http://park12.wakwak.com/~shp/lc/et/en_aics_script.html
-swiper.on( 'slideChange', function() {
-  if (swiper.realIndex == 2) {
-project.currentStyle = {
-  fillColor: 'black'
-};
+// Get a reference to the canvas object
 
+paper.install(window);
+window.onload = function() {
+
+// ball positions
 var ballPositions = [[255, 129], [610, 73], [486, 363],
   [117, 459], [484, 726], [843, 306], [789, 615], [1049, 82],
   [1292, 428], [1117, 733], [1352, 86], [92, 798]];
 
-var handle_len_rate = 2.4;
-var circlePaths = [];
-var radius = 50;
+	var handle_len_rate = 2.4;
+	var circlePaths = [];
+	var radius = 50;
+
+		var canvas = document.getElementById('myCanvas');
+		// Create an empty project and a view for the canvas:
+		paper.setup(canvas);
+		// Create a Paper.js Path to draw a line into it:
+
+		canvas.fillColor = 'black';
+
+
+
+
 for (var i = 0, l = ballPositions.length; i < l; i++) {
-  var circlePath = new Path.Circle({
-    center: ballPositions[i],
-    radius: 50
-  });
+	console.log("hi");
+  var circlePath = new paper.Path.Circle();
+	circlePath.center = ballPositions[i];
+	circlePath.radius = 50;
   circlePaths.push(circlePath);
 }
 
-var largeCircle = new Path.Circle({
-  center: [676, 433],
-  radius: 100
-});
+var largeCircle = new paper.Path.Circle();
+circlePath.center = [676, 433];
+circlePath.radius = 100;
+
 circlePaths.push(largeCircle);
 
 function onMouseMove(event) {
@@ -32,7 +43,7 @@ function onMouseMove(event) {
   generateConnections(circlePaths);
 }
 
-var connections = new Group();
+var connections = new paper.Group();
 function generateConnections(paths) {
   // Remove the last connection paths:
   connections.children = [];
