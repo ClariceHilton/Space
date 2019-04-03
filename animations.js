@@ -1,4 +1,4 @@
-console.log("here");
+paper.install(window);
 
 swiper.on('slideChange', function() {
 if (swiper.realIndex == 1) {
@@ -21,7 +21,7 @@ if (swiper.realIndex == 1) {
         myPath.add(event.point);
     }*/
 
-    
+
     view.onFrame = function(event) {
 			// On each frame, rotate the path by 3 degrees:
 			myPath.add(globals.gx*5, globals.gy*5);
