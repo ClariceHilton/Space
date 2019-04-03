@@ -35,6 +35,8 @@ window.onload = function() {
     console.log("4" + mobile);
     document.getElementById("OS").innerHTML = "Does its ease of its customisation spark joy?";
   }
+  document.getElementById("referrer").innerHTML = document.referrer;
+  console.log(document.referrer);
 };
 
 
