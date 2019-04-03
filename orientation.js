@@ -99,9 +99,9 @@ function handleMotion(event) {
 
 
 
-   /*globals.gvx = vx;
+   globals.gvx = vx;
    globals.gvy = vy;
-   console.log("x: " + vx + "y: " + vy)*/
+   console.log("x: " + vx + "y: " + vy)
 
 
 
