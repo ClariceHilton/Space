@@ -35,7 +35,7 @@ function getMobileOperatingSystem() {
 var mobile = getMobileOperatingSystem();
 if (mobile == "Windows Phone") {
   console.log("1" + mobile);
-  document.getElementById("OS").innerHTML = "Does its ease of your Windows customisation spark joy?"";
+  document.getElementById("OS").innerHTML = "Does its ease of your Windows customisation spark joy?";
 } else if (mobile == "Android"){
   console.log("2" + mobile);
   document.getElementById("OS").innerHTML = "Does its ease of your Android customisation spark joy?";
