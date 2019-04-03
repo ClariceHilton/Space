@@ -1,16 +1,3 @@
-//battery
-navigator.getBattery().then(function(battery) {
-
-    var level = battery.level;
-    if (level <= 0.35){
-         document.getElementById("battery").innerHTML = level * 100 + "%" ;
-    } else if (level > 0.35 && level <= 0.60) {
-      document.getElementById("battery").innerHTML = level * 100 + "%" ;
-    } else if (level > 0.65) {
-      document.getElementById("battery").innerHTML = level * 100 + "%"  ;
-    }
-
-});
 
 // get mobile type
 function getMobileOperatingSystem() {
@@ -34,20 +21,23 @@ function getMobileOperatingSystem() {
     return "unknown";
 }
 var mobile = getMobileOperatingSystem();
+window.onload = function() {
+  if (mobile == "Windows Phone") {
+    console.log("1" + mobile);
+    document.getElementById("OS").innerHTML = "Does its ease of your Windows customisation spark joy?";
+  } else if (mobile == "Android"){
+    console.log("2" + mobile);
+    document.getElementById("OS").innerHTML = "Does its ease of your Android customisation spark joy?";
+  } else if (mobile == "iOS"){
+    console.log("3" + mobile);
+    document.getElementById("OS").innerHTML = "Does its ease of your iPhone customisation spark joy?";
+  } else {
+    console.log("4" + mobile);
+    document.getElementById("OS").innerHTML = "Does its ease of its customisation spark joy?";
+  }
+};
 
-if (mobile == "Windows Phone") {
-  console.log("1" + mobile);
-  document.getElementById("OS").innerHTML = "Does its ease of your Windows customisation spark joy?";
-} else if (mobile == "Android"){
-  console.log("2" + mobile);
-  document.getElementById("OS").innerHTML = "Does its ease of your Android customisation spark joy?";
-} else if (mobile == "iOS"){
-  console.log("3" + mobile);
-  document.getElementById("OS").innerHTML = "Does its ease of your iPhone customisation spark joy?";
-} else {
-  console.log("4" + mobile);
-  document.getElementById("OS").innerHTML = "Does its ease of its customisation spark joy?";
-}
+
 
 //get browser
 
