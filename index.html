@@ -10,7 +10,7 @@
 <script type="text/javascript" src="paper-full.min.js"></script>
 <!-- orientation script -->
 <script type="text/javascript" src="orientation.js"></script>
-<!-- rotating squares -->
+<!-- rotating squares-->
 <script type="text/paperscript" src="square.js" canvas="myCanvas3"></script>
 <!--bubble interaction-->
 <script type="text/paperscript" src="bubbles.js" canvas="myCanvas2"></script>
@@ -19,15 +19,33 @@
 </head>
 <body>
   <!-- Slider main container -->
-  <div class="swiper-container">
+  <div id="hi" class="swiper-container">
   <div class="swiper-wrapper">
     <div id="0" class="swiper-slide">
+      <div>
+        <div class="inner-text">You are connecting to Something Given.</div>
+        <div class="inner-text">
+        Please follow directions.</div>
+        <div class="inner-text">
+        To move on please swipe the page.</div>
+        </div>
     </div>
     <div id="1" class="swiper-slide">
-      <canvas id="myCanvas"></canvas>
+        <div>
+          <div class="inner-text">You will see a case with wires and a spray attached to the wall.</div>
+          <div class="inner-text">
+          Here you can prepare your mobile companion for the pilgrimage ahead. </div>
+          <div class="inner-text">(swipe)</div>
+        </div>
     </div>
     <div id="2" class="swiper-slide">
-      <canvas id="myCanvas2"></canvas>
+      <div>
+        <div class="inner-text">You will find some charging wires.</div>
+        <div class="inner-text">How long are you willing to wait to avoid digital blackout? </div>
+        <div id="battery" class="inner-text"></div>
+
+        <div class="inner-text">(swipe)</div>
+      </div>
     </div>
     <div id="3" class="swiper-slide swiper-no-swiping">
       <p> </p>
@@ -38,8 +56,8 @@
     <div class="swiper-slide">Slide 5</div>
     <div class="swiper-slide">Slide 6</div>
     <div class="swiper-slide">Slide 7</div>
-    <div class="swiper-slide">Slide 8</div>
-    <canvas id="myCanvas3"></canvas>
+    <div class="swiper-slide"><canvas id="myCanvas3"></canvas></div>
+
     <div class="swiper-slide">Slide 9</div>
     <div class="swiper-slide">Slide 10</div>
   </div>
@@ -47,6 +65,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
 <script type="text/javascript" src="orientation.js"></script>
 <script>
+
 //initialise globals
 window.onload;
 window.globals = {
@@ -61,7 +80,10 @@ window.globals = {
 
   window.addEventListener('deviceorientation', handleOrientation);
   window.addEventListener("devicemotion", handleMotion, true);
-    }
+} else if (swiper.realIndex == 2) {
+
+
+}
   });
 </script>
 

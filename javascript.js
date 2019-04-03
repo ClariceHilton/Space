@@ -142,21 +142,13 @@ window.addEventListener('deviceorientation', handleOrientation);
 
 //var successBool = window.navigator.vibrate(pattern);
 
-//battery
 
-/*navigator.getBattery().then(function(battery) {
+
+navigator.getBattery().then(function(battery) {
 
     var level = battery.level;
-    if (level < 100 && level > 75){
-      output.innerHTML  = "you got the juice";
-    } else if (level <=75 || level >30) {
-      output.innerHTML  = "you might want to put this lil folk on charge";
-    } else if (level<=30) {
-      output.innerHTML  = "you better get to the charging station ASAP";
-    } else {
-      output.innerHTML  = "you got some security here";
-    }
-});*/
+
+});
 
 function getMobileOperatingSystem() {
   var userAgent = navigator.userAgent || navigator.vendor || window.opera;

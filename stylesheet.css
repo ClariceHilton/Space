@@ -25,7 +25,7 @@ html, body {
   position: relative;
   height: 100%;
 
-  font-size: 12em;
+  font-size: 16px;
 }
 body {
   background-image: repeating-radial-gradient(white, #cc5500 25%, white 50%);
@@ -42,7 +42,6 @@ body {
 }
 .swiper-slide {
   text-align: center;
-  font-size: 12em;
   background: #fff;
   /* Center slide text vertically */
   display: -webkit-box;
@@ -66,4 +65,9 @@ body {
 Canvas {
   width:100%;
   height: 100%;
+}
+.inner-text {
+  font-size: 5em;
+  padding: 5%;
+  flex: shrink;
 }
