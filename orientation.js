@@ -96,6 +96,7 @@ function deviceCompassListener(event) {
 
     var heading = 360 - alpha; //heading [0, 360)
     document.getElementById("s11").innerHTML = heading.toFixed([0]);
+    document.getElementById("s11").style.color = blue; 
   }
 
   // Change backgroud colour based on heading
@@ -103,7 +104,7 @@ function deviceCompassListener(event) {
   if (heading > 359 || heading < 1) { //Allow +- 1 degree
 
     document.getElementById("s11").innerHTML = "N"; // North
-    navigator.vibrate([200, 400, 200]);
+
 
       north = 1;
 
@@ -112,7 +113,7 @@ function deviceCompassListener(event) {
   else if (heading > 179 && heading < 181){ //Allow +- 1 degree
 
     document.getElementById("s11").innerHTML = "S"; // South
-    north = 1;
+    navigator.vibrate([200, 400, 200]);
     swiper.slideTo(12, 100)
   }
 else { // Otherwise, use near black
