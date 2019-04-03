@@ -160,7 +160,7 @@ function handleMotion(event) {
 
 }
 //battery
-navigator.getBattery().then(function(battery) {
+/*navigator.getBattery().then(function(battery) {
 
     var level = battery.level;
     if (level <= 0.35){
@@ -171,4 +171,4 @@ navigator.getBattery().then(function(battery) {
       document.getElementById("battery").innerHTML = level * 100 + "%"  ;
     }
 
-});
+});*/
