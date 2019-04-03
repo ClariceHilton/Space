@@ -1,4 +1,4 @@
-// get mobile type 
+// get mobile type
 function getMobileOperatingSystem() {
   var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
@@ -47,4 +47,62 @@ function handleOrientation(event) {
 globals.gx = x;
 globals.gy = y;
   console.log('here: ' + x + " " + y);
+}
+//variables for understanding acceleration
+var dx=0;
+var pvx;
+var vx=0;
+var vy=0;
+var vz=0;
+//stores what device is connected
+var device;
+
+//function for what device is connected
+if( /Android/i.test(navigator.userAgent) ) {
+  device = "Android";
+
+} else if (/iPhone|iPad|iPod/i.test) {
+  device = "IOS";
+
+} else {
+  device = "unknown";
+}
+
+//device stores
+function handleMotion(event) {
+
+  var x = event.acceleration.x;
+  var y = event.acceleration.y;
+  var z = event.acceleration.z;
+  var n = event.accelerationIncludingGravity;
+  var a = event.rotationRate.alpha;
+  var b = event.rotationRate.beta;
+  var g = event.rotationRate.gamma;
+  var p = event.interval;
+
+
+  if (x > 0.2 || x < -0.3){
+    pvx = vx;
+    vx=vx+x*0.001;
+  }
+  if (x < 0.01 && x > -0.01){
+
+    vx=0;
+  }
+
+  if (y > 0.5 || y < -0.5){
+    vy=vy+y*0.001;
+  }
+  if (y<0.5 && y> -0.5) {
+  vy = 0;
+  }
+
+
+
+   /*globals.gvx = vx;
+   globals.gvy = vy;
+   console.log("x: " + vx + "y: " + vy)*/
+
+
+
 }
