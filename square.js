@@ -24,7 +24,7 @@ function onFrame(event) {
 	for (var i = 0, l = children.length; i < l; i++) {
 		var item = children[i];
 		var delta = (mousePoint - item.position) / (i + 5);
-		item.rotate(Math.sin((event.count + i) / 10) * 7);
+		item.rotate(Math.sin((event.count + i) / 10) * globals.gvx);
 		if (delta.length > 0.1)
 			item.position += delta;
 	}

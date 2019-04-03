@@ -87,14 +87,14 @@ function handleMotion(event) {
   }
   if (x < 0.01 && x > -0.01){
 
-    vx=0;
+
   }
 
   if (y > 0.5 || y < -0.5){
     vy=vy+y*0.001;
   }
   if (y<0.5 && y> -0.5) {
-  vy = 0;
+  
   }
 
 
