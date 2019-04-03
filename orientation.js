@@ -72,25 +72,51 @@ function handleOrientation(event) {
 globals.gx = x;
 globals.gy = y;
   //console.log('here: ' + x + " " + y);
-}
+
 //variables for understanding acceleration
 var dx=0;
 var pvx;
 var vx=0;
 var vy=0;
 var vz=0;
-//stores what device is connected
-var device;
+}
 
-//function for what device is connected
-if( /Android/i.test(navigator.userAgent) ) {
-  device = "Android";
+function deviceCompassListener(event) {
+  var alpha    = event.alpha; //z axis rotation [0,360)
+  var beta     = event.beta; //x axis rotation [-180, 180]
+  var gamma    = event.gamma; //y axis rotation [-90, 90]
+  //Check if absolute values have been sent
+  if (typeof event.webkitCompassHeading !== "undefined") {
+    alpha = event.webkitCompassHeading; //iOS non-standard
+    var heading = alpha;
+    document.getElementById("s11").innerHTML = heading.toFixed([0]);
+  }
+  else {
 
-} else if (/iPhone|iPad|iPod/i.test) {
-  device = "IOS";
+    var heading = 360 - alpha; //heading [0, 360)
+    document.getElementById("s11").innerHTML = heading.toFixed([0]);
+  }
 
-} else {
-  device = "unknown";
+  // Change backgroud colour based on heading
+  // Green for North and South, black otherwise
+  if (heading > 359 || heading < 1) { //Allow +- 1 degree
+
+    document.getElementById("s11").innerHTML = "N"; // North
+    navigator.vibrate([200, 400, 200]);
+
+      north = 1;
+
+
+  }
+  else if (heading > 179 && heading < 181){ //Allow +- 1 degree
+    
+    document.getElementById("s11").innerHTML = "S"; // South
+    north = 1;
+    swiper.slideTo(12, 100)
+  }
+else { // Otherwise, use near black
+
+}
 }
 
 //device stores
