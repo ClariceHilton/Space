@@ -31,13 +31,16 @@ circlePaths.push(largeCircle);
 view.onFrame = function(event) {
     // Every frame, rotate the path by 3 degrees:
     console.log("hi");
+    largeCircle.position.x = global.gx;
+    largeCircle.position.y = global.gy;
+    generateConnections(circlePaths);
 }
 
-function onMouseMove(event) {
+/*function onMouseMove(event) {
   largeCircle.position = event.point;
   generateConnections(circlePaths);
 
-}
+}*/
 
 var connections = new Group();
 function generateConnections(paths) {
