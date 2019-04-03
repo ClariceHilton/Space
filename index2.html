@@ -8,9 +8,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
 <script type="text/javascript" src="paper-full.min.js"></script>
-
-<!-- Define inlined JavaScript -->
-<script type="text/javascript" src="paper-full.min.js"></script>
+<script type="text/javascript" src="bubbles2.js" canvas="myCanvas"></script>
 <!-- Define inlined JavaScript -->
 
 </head>
@@ -48,15 +46,22 @@
 <script src="javascript.js"></script>-->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
-<script type="text/paperscript" src="bubbles.js" canvas="myCanvas" ></script>
+
 <!-- Initialize Swiper -->
 <script>
+window.globals = {
+  swiperIndex: 0};
   var north = 0;
   var noNorth = 0;
   var swiper = new Swiper('.swiper-container');
   // Get event data
   swiper.on( 'slideChange', function() {
-    if (swiper.realIndex == 2) {
+    if (swiper.realIndex == 1) {
+      globals.swiperIndex = 1;
+      console.log(globals.swiperIndex);
+    }
+    else if (swiper.realIndex == 2) {
+      globals.swiperIndex = 2;
       function deviceOrientationListener(event) {
         var alpha    = event.alpha; //z axis rotation [0,360)
         var beta     = event.beta; //x axis rotation [-180, 180]
@@ -108,10 +113,7 @@
 
     }
   });
-
-
 </script>
-
 
 <!-- <script type="text/javascript" src="animations.js"></script> -->
 </body>

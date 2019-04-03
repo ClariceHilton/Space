@@ -25,7 +25,7 @@ var ballPositions = [[255, 129], [610, 73], [486, 363],
 
 
 for (var i = 0, l = ballPositions.length; i < l; i++) {
-	console.log("hi");
+
   var circlePath = new paper.Path.Circle();
 	circlePath.center = ballPositions[i];
 	circlePath.radius = 50;
@@ -37,6 +37,11 @@ circlePath.center = [676, 433];
 circlePath.radius = 100;
 
 circlePaths.push(largeCircle);
+
+paper.view.draw();
+
+console.log('hi');
+/*tool = new paper.Tool()
 
 function onMouseMove(event) {
   largeCircle.position = event.point;
@@ -128,5 +133,5 @@ function getVector(radians, length) {
     angle: radians * 180 / Math.PI,
     length: length
   });
-}
+}*/
 }

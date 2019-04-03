@@ -1,7 +1,6 @@
 // Ported from original Metaball script by SATO Hiroyuki
 // http://park12.wakwak.com/~shp/lc/et/en_aics_script.html
-swiper.on( 'slideChange', function() {
-  if (swiper.realIndex == 2) {
+if (globals.swiperIndex == 1){
 project.currentStyle = {
   fillColor: 'black'
 };
@@ -119,4 +118,3 @@ function getVector(radians, length) {
   });
 }
 }
-});
