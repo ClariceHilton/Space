@@ -40,12 +40,13 @@ circlePaths.push(largeCircle);
 
 paper.view.draw();
 
-console.log('hi');
-/*tool = new paper.Tool()
+
+tool = new paper.Tool()
 
 function onMouseMove(event) {
   largeCircle.position = event.point;
   generateConnections(circlePaths);
+	console.log('hi');
 }
 
 var connections = new paper.Group();
@@ -133,5 +134,5 @@ function getVector(radians, length) {
     angle: radians * 180 / Math.PI,
     length: length
   });
-}*/
+}
 }

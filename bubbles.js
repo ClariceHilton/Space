@@ -2,7 +2,7 @@
 // http://park12.wakwak.com/~shp/lc/et/en_aics_script.html
 
 
-  console.log("here 1");
+
 project.currentStyle = {
   fillColor: 'black'
 };
@@ -28,10 +28,15 @@ var largeCircle = new Path.Circle({
 });
 circlePaths.push(largeCircle);
 
+view.onFrame = function(event) {
+    // Every frame, rotate the path by 3 degrees:
+    console.log("hi");
+}
+
 function onMouseMove(event) {
   largeCircle.position = event.point;
   generateConnections(circlePaths);
-  console.log("here 2");
+
 }
 
 var connections = new Group();
