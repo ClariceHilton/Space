@@ -89,7 +89,7 @@ window.globals = {
       globals.gy = y;
         console.log('here: ' + x + " " + y);
       }
-
+  window.addEventListener('deviceorientation', handleOrientation);
 
     }
     else if (swiper.realIndex == 3) {
@@ -179,7 +179,7 @@ circlePaths.push(largeCircle);
 
 view.onFrame = function(event) {
     // Every frame, rotate the path by 3 degrees:
-    console.log("hi");
+    console.log(globals.gx);
     largeCircle.position.x = globals.gx;
     largeCircle.position.y = globals.gy;
     generateConnections(circlePaths);
