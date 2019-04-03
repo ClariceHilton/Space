@@ -72,14 +72,14 @@ function handleOrientation(event) {
 globals.gx = x;
 globals.gy = y;
   //console.log('here: ' + x + " " + y);
-
+}
 //variables for understanding acceleration
 var dx=0;
 var pvx;
 var vx=0;
 var vy=0;
 var vz=0;
-}
+
 
 function deviceCompassListener(event) {
   var alpha    = event.alpha; //z axis rotation [0,360)
@@ -109,7 +109,7 @@ function deviceCompassListener(event) {
 
   }
   else if (heading > 179 && heading < 181){ //Allow +- 1 degree
-    
+
     document.getElementById("s11").innerHTML = "S"; // South
     north = 1;
     swiper.slideTo(12, 100)
