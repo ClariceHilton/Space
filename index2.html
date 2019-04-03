@@ -25,10 +25,11 @@
 
 </div>
     <div id="2" class="swiper-slide">
-      <canvas id="myCanvas"></canvas>
+
 
     </div>
     <div id="3" class="swiper-slide swiper-no-swiping">
+      <canvas id="myCanvas"></canvas>
       <p> </p>
     </div>
     <div id="4" class="swiper-slide">Slide 4</div>
@@ -60,8 +61,8 @@ window.globals = {
       globals.swiperIndex = 1;
       console.log(globals.swiperIndex);
     }
-    else if (swiper.realIndex == 2) {
-      globals.swiperIndex = 2;
+    else if (swiper.realIndex == 3) {
+      globals.swiperIndex = 3;
       function deviceOrientationListener(event) {
         var alpha    = event.alpha; //z axis rotation [0,360)
         var beta     = event.beta; //x axis rotation [-180, 180]
