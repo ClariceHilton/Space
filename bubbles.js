@@ -1,6 +1,6 @@
 // Ported from original Metaball script by SATO Hiroyuki
 // http://park12.wakwak.com/~shp/lc/et/en_aics_script.html
-if (globals.swiperIndex == 1){
+if (globals.swiperIndex == 1|| globals.swiperIndex == 2){
 
   console.log("here 1");
 project.currentStyle = {
