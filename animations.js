@@ -23,6 +23,7 @@ if (swiper.realIndex == 1) {
 
     tool.onFrame = function(event) {
       myPath.add(globals.gx*5, globals.gy*5);
+      console.log("here");
     }
 
     /*function handleOrientation(event) {
