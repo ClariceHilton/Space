@@ -1,5 +1,5 @@
 //battery
-navigator.getBattery().then(function(battery) {
+/*navigator.getBattery().then(function(battery) {
 
     var level = battery.level;
     if (level <= 0.35){
@@ -10,10 +10,11 @@ navigator.getBattery().then(function(battery) {
       document.getElementById("battery").innerHTML = level * 100 + "%"  ;
     }
 
-});
+});*/
 
 // get mobile type
 function getMobileOperatingSystem() {
+  console.log("hai");
   var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
       // Windows Phone must come first because its UA also contains "Android"
@@ -33,6 +34,7 @@ function getMobileOperatingSystem() {
     return "unknown";
 }
 var mobile = getMobileOperatingSystem();
+
 if (mobile == "Windows Phone") {
   console.log("1" + mobile);
   document.getElementById("OS").innerHTML = "Does its ease of your Windows customisation spark joy?";
