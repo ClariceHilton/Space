@@ -1,3 +1,6 @@
+
+
+
 var mousePoint = view.center;
 var amount = 25;
 var colors = ['red', 'white', 'blue', 'white'];
@@ -12,22 +15,15 @@ for (var i = 0; i < amount; i++) {
 }
 
 
-view.onFrame = function(event) {
-    // Every frame, update with motion x y velocity
-  	mousePoint.x = globals.gvx;
-		mousePoint.y = globals.gyx;
-}
 
 var children = project.activeLayer.children;
 function onFrame(event) {
 	for (var i = 0, l = children.length; i < l; i++) {
 		var item = children[i];
 		var delta = (mousePoint - item.position) / (i + 5);
-		item.rotate(Math.sin((event.count + i) / 10) * 7);
+		item.rotate(Math.sin((event.count + i) / 10) * (globals.gvx*10));
 		if (delta.length > 0.1)
 			item.position += delta;
 	}
-	scale = (1 - i / amount) * globals.gvx;
-	path.scale(scale);
-	console.log("sc");
+
 }
