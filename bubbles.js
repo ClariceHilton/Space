@@ -119,3 +119,4 @@ function getVector(radians, length) {
   });
 }
 }
+});
