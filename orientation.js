@@ -24,18 +24,17 @@ var mobile = getMobileOperatingSystem();
 window.onload = function() {
   if (mobile == "Windows Phone") {
 
-    document.getElementById("OS").innerHTML = "Does its ease of your Windows customisation spark joy?";
+    document.getElementById("OS").innerHTML = "Does this Windows personalisatin spark joy?";
   } else if (mobile == "Android"){
 
-    document.getElementById("OS").innerHTML = "Does its ease of your Android customisation spark joy?";
+    document.getElementById("OS").innerHTML = "Does this Android personalisation spark joy?";
   } else if (mobile == "iOS"){
 
-    document.getElementById("OS").innerHTML = "Does its ease of your iPhone customisation spark joy?";
+    document.getElementById("OS").innerHTML = "Does this iPhone personalisation spark joy?";
   } else {
 
-    document.getElementById("OS").innerHTML = "Does its ease of its customisation spark joy?";
+    document.getElementById("OS").innerHTML = "Does this personalisation spark joy?";
   }
-  document.getElementById("referrer").innerHTML = document.referrer;
 
 };
 
