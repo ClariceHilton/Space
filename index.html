@@ -264,7 +264,7 @@ var Boid = Base.extend({
  },
 
  createItems: function() {
-    console.log("hi");
+
    this.head = new Shape.Ellipse({
      center: [0, 0],
      size: [13, 8],
@@ -304,6 +304,7 @@ var Boid = Base.extend({
  update: function() {
    // Update velocity
    this.vector += this.acceleration;
+   this.maxSpeed = this.maxSpeed * globals.gvy;
    // Limit speed (vector#limit?)
    this.vector.length = Math.min(this.maxSpeed, this.vector.length);
    this.position += this.vector;
@@ -456,7 +457,7 @@ function onFrame(event) {
    }
    boids[i].run(boids);
  }
- this.maxSpeed = this.maxSpeed * globals.gyx;
+
 }
 
 // Reposition the heart path whenever the window is resized:
