@@ -9,7 +9,7 @@ project.currentStyle = {
 
 var ballPositions = [[255, 129], [610, 73], [486, 363],
   [117, 459], [484, 726], [843, 306], [789, 615], [1049, 82],
-  [1292, 428], [1117, 733], [1352, 86], [92, 798]];
+  [1292, 428], [1117, 733], [1352, 86], [92, 798], [1800, 142]];
 
 var handle_len_rate = 2.4;
 var circlePaths = [];
@@ -34,7 +34,7 @@ view.onFrame = function(event) {
     largeCircle.position.x = globals.gx*5;
     largeCircle.position.y = globals.gy*5;
     generateConnections(circlePaths);
-    
+
 }
 
 /*function onMouseMove(event) {
