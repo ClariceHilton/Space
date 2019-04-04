@@ -189,6 +189,8 @@ window.globals = {
   console.log("here");
   window.addEventListener("deviceorientation", handleOrientation);
   window.removeEventListener("devicemotion", handleMotion, true);
+} else if (swiper.realIndex == 19){
+  window.addEventListener("devicemotion", handleMotion, true);
 }
   });
 </script>
