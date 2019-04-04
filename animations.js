@@ -8,7 +8,7 @@ paper.install(window);
 
     var myPath = new paper.Path();
     myPath.strokeColor = 'black';
-
+    myPath.strokeWidth = 10;
     // Draw the view now:
     paper.view.draw();
 

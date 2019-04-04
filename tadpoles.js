@@ -245,7 +245,7 @@ function onFrame(event) {
    }
    boids[i].run(boids);
  }
- if (globals.gvy > 0.5 || globals.gvy < -0.5){
+ if (globals.gvy > 0.3 || globals.gvy < -0.3){
    boids.push(new Boid(position, 10, 0.05));
    console.log("made");
  }
