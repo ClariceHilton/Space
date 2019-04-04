@@ -88,22 +88,22 @@ function deviceCompassListener(event) {
   var gamma    = event.gamma; //y axis rotation [-90, 90]
   //Check if absolute values have been sent
   if (typeof event.webkitCompassHeading !== "undefined") {
-    console.log("aqui1");
+
     alpha = event.webkitCompassHeading; //iOS non-standard
     var heading = alpha;
     document.getElementById("s12").innerHTML = heading.toFixed([0]);
   }
   else {
-console.log("aqui2");
+
     var heading = 360 - alpha; //heading [0, 360)
     document.getElementById("s12").innerHTML = heading.toFixed([0]);
-    document.getElementById("s12").style.color = blue;
+
   }
 
   // Change backgroud colour based on heading
   // Green for North and South, black otherwise
-  if (heading > 359 || heading < 1) { //Allow +- 1 degree
-console.log("aqui3");
+  if (heading > 358 || heading < 2) { //Allow +- 1 degree
+
     document.getElementById("s12").innerHTML = "N"; // North
 
 
@@ -111,14 +111,26 @@ console.log("aqui3");
 
 
   }
-  else if (heading > 179 && heading < 181){ //Allow +- 1 degree
-console.log("aqui4");
+  else if (heading > 178 && heading < 182){ //Allow +- 1 degree
+
     document.getElementById("s12").innerHTML = "S"; // South
-    navigator.vibrate([200, 400, 200]);
-    swiper.slideTo(12, 100)
+        document.getElementById("s12").style.color = blue;
+
+    if (swiper.realIndex == 12) {
+      swiper.slideTo(13, 100);
+      navigator.vibrate([200, 400, 200]);
+    }
+  } else if (heading > 88 && heading < 92) {
+    document.getElementById("s12").innerHTML = "E"; // South
+        document.getElementById("s12").style.color = blue;
+
+    if (swiper.realIndex == 12) {
+      swiper.slideTo(13, 100);
+      navigator.vibrate([200, 400, 200]);
+    }
   }
 else { // Otherwise, use near black
- document.body.style.backgroundColor = "#161616";
+
 }
 }
 
