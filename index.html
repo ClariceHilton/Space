@@ -304,7 +304,8 @@ var Boid = Base.extend({
  update: function() {
    // Update velocity
    this.vector += this.acceleration;
-   this.maxSpeed = this.maxSpeed * globals.gvy;
+   this.maxSpeed = this.maxSpeed * (1 + globals.gvy);
+   console.log(this.maxSpeed);
    // Limit speed (vector#limit?)
    this.vector.length = Math.min(this.maxSpeed, this.vector.length);
    this.position += this.vector;
