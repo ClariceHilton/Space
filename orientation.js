@@ -170,7 +170,7 @@ function handleMotion(event) {
 
   if (vx > 0.05|| vx< -0.05) {
     console.log("herreee");
-    document.body.style.backgroundColor = "repeating-radial-gradient(black,  white 25%, black 50%)";
+    document.body.style.backgroundImage = "repeating-radial-gradient(black,  white 25%, black 50%)";
   } else {
     document.body.style.backgroundImage = "repeating-radial-gradient(white, #cc5500 25%, white 50%)";
   }
