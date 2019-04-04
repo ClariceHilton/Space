@@ -182,7 +182,7 @@ globals.canvasy = window.screen.height;
   var swiper = new Swiper('.swiper-container');
   // Get event data
   swiper.on( 'slideChange', function() {
-
+window.addEventListener("devicemotion", handleMotion, true);
     if (swiper.realIndex == 1) {
 
 } else if (swiper.realIndex == 2) {
