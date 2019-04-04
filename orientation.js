@@ -188,8 +188,10 @@ if (mobile == "iOS"){
 
 if (mobile == "iOS"){
   globals.gvx = vx*80;
+  globals.gvy = vy*8
 } else {
   globals.gvx = vx*120;
+  globals.gvy = vy*12;
 }
 
 

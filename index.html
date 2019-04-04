@@ -15,6 +15,7 @@
 <script type="text/paperscript" src="square.js" canvas="myCanvas3"></script>
 <!--bubble interaction--
 <script type="text/paperscript" src="bubbles.js" canvas="myCanvas2"></script>
+<!--<script type="text/paperscript" src="tadpoles.js" canvas="myCanvas4"></script>-->
 
 
 </head>
@@ -267,11 +268,11 @@ var Boid = Base.extend({
    this.head = new Shape.Ellipse({
      center: [0, 0],
      size: [13, 8],
-     fillColor: 'white'
+     fillColor: 'black'
    });
 
    this.path = new Path({
-     strokeColor: 'white',
+     strokeColor: 'black',
      strokeWidth: 2,
      strokeCap: 'round'
    });
@@ -279,7 +280,7 @@ var Boid = Base.extend({
      this.path.add(new Point());
 
    this.shortPath = new Path({
-     strokeColor: 'white',
+     strokeColor: 'black',
      strokeWidth: 4,
      strokeCap: 'round'
    });
@@ -455,6 +456,7 @@ function onFrame(event) {
    }
    boids[i].run(boids);
  }
+ this.maxSpeed = this.maxSpeed * globals.gyx;
 }
 
 // Reposition the heart path whenever the window is resized:
