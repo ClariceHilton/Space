@@ -149,8 +149,6 @@ window.globals = {
     console.log("swiper.realIndex");
     if (swiper.realIndex == 1) {
 
-
-  window.addEventListener("devicemotion", handleMotion, true);
 } else if (swiper.realIndex == 2) {
 
 
@@ -158,6 +156,7 @@ window.globals = {
   window.addEventListener("deviceorientation", deviceCompassListener);
 } else if (swiper.realIndex == 13) {
   window.removeEventListener("deviceorientation", deviceCompassListener);
+    window.addEventListener("devicemotion", handleMotion, true);
 }
   });
 </script>
