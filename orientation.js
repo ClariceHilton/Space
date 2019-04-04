@@ -72,7 +72,7 @@ function handleOrientation(event) {
 globals.gx = x;
 globals.gy = y;
 globals.gz = z;
-  
+
 }
 //variables for understanding acceleration
 var dx=0;
@@ -168,12 +168,21 @@ function handleMotion(event) {
   }
 
 if (swiper.realIndex == 13){
-
+{
+if (mobile == "iOS"){
   if (vx > 0.1|| vx< -0.1) {
     document.body.style.backgroundImage = "repeating-radial-gradient(black,  white 25%, black 50%)";
   } else {
     document.body.style.backgroundImage = "repeating-radial-gradient(white, #cc5500 25%, white 50%)";
   }
+} else {
+  if (vx > 0.05|| vx< -0.05) {
+    document.body.style.backgroundImage = "repeating-radial-gradient(black,  white 25%, black 50%)";
+  } else {
+    document.body.style.backgroundImage = "repeating-radial-gradient(white, #cc5500 25%, white 50%)";
+  }
+}
+
 }
 
 
