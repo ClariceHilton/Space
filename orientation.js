@@ -23,16 +23,16 @@ function getMobileOperatingSystem() {
 var mobile = getMobileOperatingSystem();
 window.onload = function() {
   if (mobile == "Windows Phone") {
-    console.log("1" + mobile);
+
     document.getElementById("OS").innerHTML = "Does its ease of your Windows customisation spark joy?";
   } else if (mobile == "Android"){
-    console.log("2" + mobile);
+
     document.getElementById("OS").innerHTML = "Does its ease of your Android customisation spark joy?";
   } else if (mobile == "iOS"){
-    console.log("3" + mobile);
+
     document.getElementById("OS").innerHTML = "Does its ease of your iPhone customisation spark joy?";
   } else {
-    console.log("4" + mobile);
+
     document.getElementById("OS").innerHTML = "Does its ease of its customisation spark joy?";
   }
   document.getElementById("referrer").innerHTML = document.referrer;
@@ -118,7 +118,7 @@ function deviceCompassListener(event) {
 
             if (swiper.realIndex == 12) {
               swiper.slideTo(13, 100);
-              navigator.vibrate([200, 400, 200]);
+              //navigator.vibrate([200, 400, 200]);
             }
 
   } else if (heading > 88 && heading < 92) {
