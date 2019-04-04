@@ -196,6 +196,7 @@ if (mobile == "iOS"){
 
 
 }
+}
 //battery
 /*navigator.getBattery().then(function(battery) {
 
