@@ -250,6 +250,7 @@ function onFrame(event) {
 
  }
  if (globals.gvz > 0.2 || globals.gvz < -0.2){
+	 console.log('here');
 	 var position1 = Point.random() * view.size;
    boids.push(new Boid(position1, 10, 0.05));
 
