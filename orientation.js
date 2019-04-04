@@ -117,7 +117,7 @@ function deviceCompassListener(event) {
         document.getElementById("s12").style.color = "blue";
 
     if (swiper.realIndex == 12) {
-      swiper.slideTo(14, 200);
+      swiper.slideTo(15, 200);
       navigator.vibrate([200, 400, 200]);
     }
   } else if (heading > 88 && heading < 92) {
