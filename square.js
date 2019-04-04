@@ -7,7 +7,7 @@ All rights reserved.
 */
 var mousePoint = view.center;
 var amount = 25;
-var colors = ['red', 'white', 'blue', 'white'];
+var colors = ['black', 'white', 'black', 'white'];
 
 for (var i = 0; i < amount; i++) {
 	var rect = new Rectangle([0, 0], [25, 25]);
@@ -25,7 +25,7 @@ function onFrame(event) {
 	for (var i = 0, l = children.length; i < l; i++) {
 		var item = children[i];
 		var delta = (mousePoint - item.position) / (i + 5);
-		item.rotate(Math.sin((event.count + i) / 10) * (globals.gvx*10));
+		item.rotate(Math.sin((event.count + i) / 10) * (globals.gvx*100));
 		if (delta.length > 0.1)
 			item.position += delta;
 	}

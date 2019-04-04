@@ -167,12 +167,15 @@ function handleMotion(event) {
   vy = 0;
   }
 
-  if (vx > 0.1|| vx< -0.1) {
+if (swiper.realIndex == 13){
 
+  if (vx > 0.1|| vx< -0.1) {
     document.body.style.backgroundImage = "repeating-radial-gradient(black,  white 25%, black 50%)";
   } else {
     document.body.style.backgroundImage = "repeating-radial-gradient(white, #cc5500 25%, white 50%)";
   }
+}
+
 
 
 
