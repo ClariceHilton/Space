@@ -1,7 +1,5 @@
 paper.install(window);
 
-swiper.on('slideChange', function() {
-if (swiper.realIndex == 1) {
 
     // Get a reference to the canvas object
     var canvas = document.getElementById('myCanvas');
@@ -33,6 +31,3 @@ if (swiper.realIndex == 1) {
 
       }
 		}
-
-  }
-});
