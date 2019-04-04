@@ -194,6 +194,7 @@ if (mobile == "iOS"){
   globals.gvy = vy*12;
 }
 
+console.log(globals.gvy);
 
 }
 //battery
