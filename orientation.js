@@ -24,16 +24,16 @@ var mobile = getMobileOperatingSystem();
 window.onload = function() {
   if (mobile == "Windows Phone") {
 
-    document.getElementById("OS").innerHTML = "Does this Windows personalisatin spark joy?";
+    document.getElementById("OS").innerHTML = "How have you personalised this Windows tool?";
   } else if (mobile == "Android"){
 
-    document.getElementById("OS").innerHTML = "Does this Android personalisation spark joy?";
+    document.getElementById("OS").innerHTML = "How have you personalised this Android tool?";
   } else if (mobile == "iOS"){
 
-    document.getElementById("OS").innerHTML = "Does this iPhone personalisation spark joy?";
+    document.getElementById("OS").innerHTML = "How have you personalised this Apple tool?";
   } else {
 
-    document.getElementById("OS").innerHTML = "Does this personalisation spark joy?";
+    document.getElementById("OS").innerHTML = "How have you personalised this tool?";
   }
 
 };
