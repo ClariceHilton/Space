@@ -74,9 +74,9 @@ function handleMotion(event) {
   }
 
   if (vx > 0.05|| vx< -0.05) {
-    document.body.style.backgroundColor = "yellow";
+    background-image: repeating-radial-gradient(#cc5500,  white 25%, #cc5500 50%);
   } else {
-    document.body.style.backgroundColor = "white";
+    background-image: repeating-radial-gradient(white, #cc5500 25%, white 50%);
   }
 
 

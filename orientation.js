@@ -128,20 +128,14 @@ function deviceCompassListener(event) {
         document.getElementById("s14").innerHTML = "E"; // East
             document.getElementById("s14").style.color = "blue";
 
-    if (swiper.realIndex == 14) {
-      swiper.slideTo(15, 100);
-      //navigator.vibrate([200, 400, 200]);
-    }
   }else if (heading > 278 && heading < 282) {
     document.getElementById("s12").innerHTML = "W"; // West
         document.getElementById("s12").style.color = "blue";
-        document.getElementById("s14").innerHTML = "W"; // West
-            document.getElementById("s14").style.color = "blue";
 
   }
 else { // Otherwise, use near black
   document.getElementById("s12").style.color = "black";
-  document.getElementById("s14").style.color = "black";
+
 }
 }
 
@@ -174,6 +168,13 @@ function handleMotion(event) {
   vy = 0;
   }
 
+  if(swiper.index == 13){
+    if (vx > 0.05|| vx< -0.05) {
+      background-image: repeating-radial-gradient(#cc5500,  white 25%, #cc5500 50%);
+    } else {
+      background-image: repeating-radial-gradient(white, #cc5500 25%, white 50%);
+    }
+  }
 
 
    globals.gvx = vx;
