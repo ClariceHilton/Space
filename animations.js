@@ -27,6 +27,14 @@ paper.install(window);
       if (swiper.realIndex > 18){
         var JSON = paper.project.exportJSON();
         console.log(JSON);
+        const fs = require('fs');
+
+fs.writeFileSync('file.json', JSON, finished);
+
+               function finished(err)
+               {
+                   console.log('success');
+               }
         paper.project.remove();
 
       }
