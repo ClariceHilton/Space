@@ -186,7 +186,13 @@ if (mobile == "iOS"){
 }
 }
 
+if (mobile == "iOS"){
+  globals.gvx = vx*80;
+} else {
+  globals.gvx = vx*120;
+}
 
+}
 
    globals.gvx = vx;
    globals.gvy = vy;
