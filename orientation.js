@@ -190,7 +190,7 @@ if (mobile == "iOS"){
 
    globals.gvx = vx;
    globals.gvy = vy;
-   //console.log("x: " + vx + "y: " + vy);
+   console.log("x: " + globals.vx + "y: " + globals.vy);
 
 
 

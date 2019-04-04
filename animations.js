@@ -21,7 +21,6 @@ paper.install(window);
 
 
     view.onFrame = function(event) {
-      console.log('here: ' + globals.gx*5 + " " + globals.gy*5);
 			//times global by
 			myPath.add(globals.gx*5, globals.gy*5);
 
