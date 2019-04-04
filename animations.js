@@ -12,9 +12,9 @@ paper.install(window);
     // Draw the view now:
     paper.view.draw();
 
-    var tool = new paper.Tool();
+    /*var tool = new paper.Tool();
 
-    /*tool.onMouseDown = function(event) {
+    tool.onMouseDown = function(event) {
       console.log("here");
         myPath.add(event.point);
     }*/
