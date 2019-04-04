@@ -114,7 +114,7 @@ function deviceCompassListener(event) {
   else if (heading > 178 && heading < 182){ //Allow +- 1 degree
 
     document.getElementById("s12").innerHTML = "S"; // South
-        document.getElementById("s12").style.color = blue;
+        document.getElementById("s12").style.color = "blue";
 
     if (swiper.realIndex == 12) {
       swiper.slideTo(13, 100);
@@ -122,7 +122,7 @@ function deviceCompassListener(event) {
     }
   } else if (heading > 88 && heading < 92) {
     document.getElementById("s12").innerHTML = "E"; // South
-        document.getElementById("s12").style.color = blue;
+        document.getElementById("s12").style.color = "blue";
 
     if (swiper.realIndex == 12) {
       swiper.slideTo(13, 100);
