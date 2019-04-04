@@ -168,13 +168,12 @@ function handleMotion(event) {
   vy = 0;
   }
 
-  if(swiper.index == 13){
-    if (vx > 0.05|| vx< -0.05) {
-      background-image: repeating-radial-gradient(#cc5500,  white 25%, #cc5500 50%);
-    } else {
-      background-image: repeating-radial-gradient(white, #cc5500 25%, white 50%);
-    }
+  if (vx > 0.05|| vx< -0.05) {
+    document.body.style.backgroundColor = "repeating-radial-gradient(black,  white 25%, black 50%)";
+  } else {
+    document.body.style.backgroundImage = "repeating-radial-gradient(white, #cc5500 25%, white 50%)";
   }
+
 
 
    globals.gvx = vx;
