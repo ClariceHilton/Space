@@ -8,7 +8,7 @@ project.currentStyle = {
 };
 
 var ballPositions = [[255, 129], [610, 73], [486, 363],
-  [117, 459], [484, 726], [843, 306], [789, 615], [92, 798], [190, 1000], [400, 1152]];
+  [117, 459], [484, 726], [843, 306], [789, 615], [92, 798], [190, 1152], [400, 1428]];
 
 var handle_len_rate = 2.4;
 var circlePaths = [];
@@ -30,7 +30,7 @@ circlePaths.push(largeCircle);
 view.onFrame = function(event) {
     // Every frame, rotate the path by 3 degrees:
 
-    largeCircle.position.x = globals.gz*5;
+    largeCircle.position.x = globals.gz*-5;
     largeCircle.position.y = globals.gy*5;
     generateConnections(circlePaths);
 
