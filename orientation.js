@@ -71,6 +71,7 @@ function handleOrientation(event) {
   ball.style.left = (maxY*y/180 - 10) + "px";*/
 globals.gx = x;
 globals.gy = y;
+globals.gz = z;
   console.log('here: ' + x + " " + y);
 }
 //variables for understanding acceleration

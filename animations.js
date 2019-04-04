@@ -22,9 +22,9 @@ paper.install(window);
 
     view.onFrame = function(event) {
 
-			// On each frame, rotate the path by 3 degrees:
-			myPath.add(globals.gx*5, globals.gy*5);
-      
+			//times global by
+			myPath.add(globals.gx*6, globals.gz*6);
+
       if (swiper.realIndex > 18){
         var JSON = paper.project.exportJSON();
         console.log(JSON);
