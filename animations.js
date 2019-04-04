@@ -21,9 +21,9 @@ paper.install(window);
 
 
     view.onFrame = function(event) {
-
+      console.log('here: ' + globals.gx + " " + globals.gy);
 			//times global by
-			myPath.add(globals.gx*6, globals.gz*6);
+			myPath.add(globals.gx, globals.gy);
 
       if (swiper.realIndex > 18){
         var JSON = paper.project.exportJSON();

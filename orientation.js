@@ -72,7 +72,7 @@ function handleOrientation(event) {
 globals.gx = x;
 globals.gy = y;
 globals.gz = z;
-  console.log('here: ' + x + " " + y);
+  
 }
 //variables for understanding acceleration
 var dx=0;
