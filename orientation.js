@@ -117,15 +117,15 @@ function deviceCompassListener(event) {
         document.getElementById("s12").style.color = "blue";
         document.getElementById("s14").innerHTML = "S"; // South
             document.getElementById("s14").style.color = "blue";
+            if (swiper.realIndex == 12) {
+              swiper.slideTo(13, 100);
+              //navigator.vibrate([200, 400, 200]);
+            }
 
-    if (swiper.realIndex == 12) {
-      swiper.slideTo(13, 200);
-      navigator.vibrate([200, 400, 200]);
-    }
   } else if (heading > 88 && heading < 92) {
-    document.getElementById("s12").innerHTML = "E"; // South
+    document.getElementById("s12").innerHTML = "E"; // East
         document.getElementById("s12").style.color = "blue";
-        document.getElementById("s14").innerHTML = "E"; // South
+        document.getElementById("s14").innerHTML = "E"; // East
             document.getElementById("s14").style.color = "blue";
 
     if (swiper.realIndex == 14) {
@@ -133,10 +133,10 @@ function deviceCompassListener(event) {
       //navigator.vibrate([200, 400, 200]);
     }
   }else if (heading > 278 && heading < 282) {
-    document.getElementById("s12").innerHTML = "W"; // South
+    document.getElementById("s12").innerHTML = "W"; // West
         document.getElementById("s12").style.color = "blue";
-        document.getElementById("s12").innerHTML = "W"; // South
-            document.getElementById("s12").style.color = "blue";
+        document.getElementById("s14").innerHTML = "W"; // West
+            document.getElementById("s14").style.color = "blue";
 
   }
 else { // Otherwise, use near black
