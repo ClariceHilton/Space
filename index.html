@@ -171,6 +171,9 @@ window.globals = {
 } else if (swiper.realIndex == 13) {
   window.removeEventListener("deviceorientation", deviceCompassListener);
     window.addEventListener("devicemotion", handleMotion, true);
+} else if (swiper.realIndex == 14){
+  window.removeEventListener("deviceorientation", deviceCompassListener);
+  window.addEventListener("devicemotion", handleMotion, true);
 }
   });
 </script>
