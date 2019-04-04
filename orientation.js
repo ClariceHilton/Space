@@ -117,7 +117,7 @@ function deviceCompassListener(event) {
         document.getElementById("s12").style.color = "blue";
 
     if (swiper.realIndex == 12) {
-      swiper.slideTo(13, 100);
+      swiper.slideTo(14, 200);
       navigator.vibrate([200, 400, 200]);
     }
   } else if (heading > 88 && heading < 92) {
@@ -128,9 +128,17 @@ function deviceCompassListener(event) {
       swiper.slideTo(13, 100);
       navigator.vibrate([200, 400, 200]);
     }
+  }else if (heading > 278 && heading < 282) {
+    document.getElementById("s12").innerHTML = "E"; // South
+        document.getElementById("s12").style.color = "blue";
+
+    if (swiper.realIndex == 12) {
+      swiper.slideTo(13, 200);
+      navigator.vibrate([200, 400, 200]);
+    }
   }
 else { // Otherwise, use near black
-
+  document.getElementById("s12").style.color = "black";
 }
 }
 
