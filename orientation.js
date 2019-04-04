@@ -102,7 +102,7 @@ function deviceCompassListener(event) {
 
   // Change backgroud colour based on heading
   // Green for North and South, black otherwise
-  if (heading > 358 || heading < 2) { //Allow +- 1 degree
+  if (heading > 355 || heading < 5) { //Allow +- 1 degree
 
     document.getElementById("s12").innerHTML = "N"; // North
 
@@ -111,7 +111,7 @@ function deviceCompassListener(event) {
 
 
   }
-  else if (heading > 178 && heading < 182){ //Allow +- 1 degree
+  else if (heading > 175 && heading < 185){ //Allow +- 1 degree
 
     document.getElementById("s12").innerHTML = "S"; // South
         document.getElementById("s12").style.color = "blue";
@@ -121,12 +121,12 @@ function deviceCompassListener(event) {
               //navigator.vibrate([200, 400, 200]);
             }
 
-  } else if (heading > 88 && heading < 92) {
+  } else if (heading > 85 && heading < 95) {
     document.getElementById("s12").innerHTML = "E"; // East
         document.getElementById("s12").style.color = "blue";
 
 
-  }else if (heading > 278 && heading < 282) {
+  }else if (heading > 275 && heading < 285) {
     document.getElementById("s12").innerHTML = "W"; // West
         document.getElementById("s12").style.color = "blue";
 
