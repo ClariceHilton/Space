@@ -166,6 +166,13 @@ function handleMotion(event) {
   vy = 0;
   }
 
+  if (z > 0.5 || z < -0.5){
+    vz=vz+y*0.001;
+  }
+  if (z<0.5 && z> -0.5) {
+  vy = 0;
+  }
+
 if (swiper.realIndex == 13){
 {
 if (mobile == "iOS"){
@@ -187,13 +194,14 @@ if (mobile == "iOS"){
 
 if (mobile == "iOS"){
   globals.gvx = vx*80;
-  globals.gvy = vy*8
+  globals.gvy = vy*8;
+  globals.gvz = vy*8;
 } else {
   globals.gvx = vx*120;
   globals.gvy = vy*12;
+  globals.gvz = vy*12;
 }
 
-console.log(globals.gvy);
 
 }
 //battery

@@ -247,7 +247,12 @@ function onFrame(event) {
  }
  if (globals.gvy > 0.3 || globals.gvy < -0.3){
    boids.push(new Boid(position, 10, 0.05));
-   console.log("made");
+
+ }
+ if (globals.gvz > 0.2 || globals.gvz < -0.2){
+	 var position1 = Point.random() * view.size;
+   boids.push(new Boid(position1, 10, 0.05));
+
  }
 
 
