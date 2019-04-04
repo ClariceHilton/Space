@@ -117,7 +117,7 @@ function deviceCompassListener(event) {
         document.getElementById("s12").style.color = "blue";
 
             if (swiper.realIndex == 12) {
-              swiper.slideTo(13, 100);
+              swiper.slideTo(13, 400);
               //navigator.vibrate([200, 400, 200]);
             }
 
