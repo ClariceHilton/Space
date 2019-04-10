@@ -99,6 +99,7 @@ function deviceCompassListener(event) {
     document.getElementById("s12").innerHTML = heading.toFixed([0]);
 
   }
+  console.log(heading);
 
   // Change backgroud colour based on heading
   // Green for North and South, black otherwise
