@@ -2,6 +2,15 @@
 // get mobile type
 function getMobileOperatingSystem() {
 
+  var os = document.getElementById("os1");
+  var parser = new UAParser();
+
+  if (parser.getOS().version == "iOS 12.2"){
+    document.getElementById("os2").innerHTML = "Please go to your safari settings and enable orientation and motion access. This website may not work due to new iOS update." 
+  }
+
+  os.innerHTML = parser.getOS().name + ' ' + parser.getOS().version + '<br>';
+
   var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
       // Windows Phone must come first because its UA also contains "Android"

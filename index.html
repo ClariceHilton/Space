@@ -28,7 +28,7 @@
 
       <div>
 
-        <div class="inner-text">You are connecting to Something Given</div>
+        <div id ="os1" class="inner-text">You are connecting to Something Given</div>
         <div class="inner-text">
         Please follow directions</div>
         <div class="inner-text">
@@ -109,7 +109,7 @@
     </div>
     </div>
     <div id="s12" class="swiper-slide">
-      <p class="inner-text"></p>
+      <p id="os2" class="inner-text"></p>
     </div>
     <div id="s13" class="swiper-slide">
       <div>
@@ -197,6 +197,7 @@
   </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+<script type="text/javascript" src="ua-parser.js"></script>
 <script type="text/javascript" src="orientation.js"></script>
 <script>
 
@@ -205,7 +206,7 @@ window.onload;
 window.globals = {
   gx:0, gy:0, gz:0, gvx:0, gvy:0, gvz:0, canvasx: 0, canvasy: 0,
 };
-
+console.log(navigator);
 globals.canvasx = window.screen.width;
 globals.canvasy = window.screen.height;
 window.addEventListener("devicemotion", handleMotion, true);
